@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Adım Gizlilik Politikası ve KVKK Aydınlatma Metni</title>
+<!--
+  Kaynak: yayin/gizlilik-politikasi.md (yayin/web/uret-gizlilik.py ile üretilir; elle düzenleme yerine önce kaynağı düzenle).
+  Uygulama tarafı (onay penceresi, Ayarlar > Gizlilik ekranı) ile bu metin aynı veri sorumlusunu, aynı e-postayı ve aynı
+  yayın adresini kullanır; üçünden biri değişirse diğerleri de güncellenir (KvkkConsistencyTest). Dış istek yok: betik, yazı tipi, resim, izleyici kullanılmaz.
+-->
+<style>
+:root{--bg:#fff;--fg:#17181a;--muted:#5b6066;--line:#e3e5e8;--card:#f6f7f8;--mark:#fff1b8;--markfg:#5a4300}
+@media (prefers-color-scheme:dark){:root{--bg:#111214;--fg:#ececee;--muted:#a3a8ae;--line:#2a2d31;--card:#1a1c1f;--mark:#4a3b00;--markfg:#ffe9a3}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+main{max-width:42rem;margin:0 auto;padding:1.25rem 1.1rem 4rem}
+h1{font-size:1.65rem;line-height:1.25;margin:.4rem 0 .6rem}
+h2{font-size:1.2rem;line-height:1.3;margin:2.2rem 0 .6rem;padding-top:1rem;border-top:1px solid var(--line)}
+h3{font-size:1.02rem;margin:1.4rem 0 .4rem}
+p,ul{margin:.7rem 0} ul{padding-left:1.25rem} li{margin:.35rem 0}
+blockquote{margin:1rem 0;padding:.6rem .9rem;background:var(--card);border-left:4px solid var(--muted);border-radius:.4rem}
+blockquote p{margin:.2rem 0}
+code{font:.92em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--card);padding:.1em .35em;border-radius:.3em;word-break:break-all}
+mark.yer-tutucu{background:var(--mark);color:var(--markfg);padding:.05em .3em;border-radius:.3em}
+nav{background:var(--card);border-radius:.6rem;padding:.7rem 1rem;margin:1rem 0 1.4rem}
+nav strong{display:block;margin-bottom:.3rem}
+nav ol{margin:0;padding-left:1.3rem} nav li{margin:.15rem 0}
+a{color:inherit}
+a:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+@media (min-width:700px){body{font-size:18px}}
+@media print{nav{display:none}}
+</style>
+</head>
+<body>
+<main>
+<h1>Adım Gizlilik Politikası ve KVKK Aydınlatma Metni</h1>
+<nav aria-label="İçindekiler"><strong>İçindekiler</strong><ol><li><a href="#bolum-1">Veri sorumlusu ve iletişim</a></li><li><a href="#bolum-2">Kısaca</a></li><li><a href="#bolum-3">Telefonunda kalan veriler</a></li><li><a href="#bolum-4">Yapay zeka asistanı (isteğe bağlı)</a></li><li><a href="#bolum-5">Üçüncü taraflar</a></li><li><a href="#bolum-6">KVKK kapsamında işleme amacı, hukuki sebep ve haklar</a></li><li><a href="#bolum-7">Verilerini silme ve talepler</a></li><li><a href="#bolum-8">Güvenlik</a></li><li><a href="#bolum-9">Çocuklar</a></li><li><a href="#bolum-10">Tıbbi sorumluluk reddi</a></li><li><a href="#bolum-11">Değişiklikler</a></li></ol></nav>
+<p>Son güncelleme: 10 Kasım 2026 · Uygulama: Adım (com.drnt.habits) · Sürüm: 0.1.0</p>
+<h2 id="bolum-1">1. Veri sorumlusu ve iletişim</h2>
+<p>Veri sorumlusu: İsmail Duran. İletişim: destek@adimapp.me.</p>
+<h2 id="bolum-2">2. Kısaca</h2>
+<ul><li>Adım'ın <strong>hesabı, kaydı, reklamı, analitiği ve çökme raporu aracı yoktur.</strong></li><li>Alışkanlıkların, görevlerin, Bırak kayıtların ve ayarların <strong>yalnızca telefonunda</strong> durur; geliştirici bunlara erişemez. Bulut yedeğine ve cihazdan cihaza aktarıma da girmez.</li><li>Tek istisna, <strong>isteğe bağlı yapay zeka asistanıdır</strong>: Asistanı kullandığında yazdığın mesaj ve birkaç bağlam bilgisi internet üzerinden sunucumuza gönderilir (Bölüm 4). Asistanı hiç kullanmazsan Adım bu amaçla hiçbir veri göndermez.</li><li>Adım bir tedavi ya da sağlık hizmeti değildir; tanı koymaz, tıbbi tavsiye vermez.</li></ul>
+<h2 id="bolum-3">3. Telefonunda kalan veriler</h2>
+<p>Aşağıdaki veriler uygulamanın telefondaki özel alanında saklanır ve bize ya da başka bir yere gönderilmez:</p>
+<ul><li>Alışkanlıklar, rutinler ve adımları, günlük kayıtlar, seriler ve rozetler.</li><li>Görevler, listeler, adımlar ve tamamlama geçmişi.</li><li><strong>Bırak</strong> kartları, kendi yazdığın nedenler, bırakma tarihi, istek ve kayma kayıtların, "gizli kart" işaretin. Bu bilgiler hassas olabilir; yalnızca telefonunda durur ve yapay zeka asistanına <strong>gönderilmez</strong>.</li><li>Ekran süresi için seçtiğin uygulamalar, koyduğun günlük limitler ve "limit uyarısı verildi" kaydı. Uygulama süreleri, Android'in kullanım kayıtlarından telefonunda hesaplanır.</li><li>Uygulama kilidi ayarı, görünüm tercihi, hatırlatma ve sessiz saat ayarları, asistan onayın.</li></ul>
+<p><strong>Saklama süresi:</strong> Bu veriler sen silene ya da uygulamayı kaldırana kadar telefonunda kalır. Ayarlar'daki <strong>"Verilerimi sil"</strong> kartından hepsini tek adımda kalıcı olarak silebilirsin; bu işlem geri alınamaz. Uygulamayı kaldırdığında Android uygulamanın tüm verisini siler.</p>
+<p><strong>Yedek dosyası:</strong> İstersen Ayarlar'daki <strong>"Yedekleme"</strong> kartından parola ile şifrelenmiş bir yedek dosyası çıkarabilir, yine aynı yerden geri yükleyebilirsin. Bu dosya senin seçtiğin yere yazılır; biz bu dosyayı görmeyiz ve bize gönderilmez.</p>
+<h3>Kullandığı izinler</h3>
+<ul><li><strong>Kullanım erişimi:</strong> Seçtiğin uygulamalarda geçirdiğin süreyi göstermek ve limit koymak için. Bu izni Ayarlar'dan yalnızca sen verirsin; vermezsen uygulamanın geri kalanı çalışır. Veri telefondan çıkmaz.</li><li><strong>Bildirimler:</strong> Hatırlatma ve limit bildirimleri için.</li><li><strong>Açılışta çalışma (telefon yeniden başlayınca):</strong> hatırlatma alarmlarını yeniden kurmak için.</li><li><strong>Alarm kurma:</strong> görevden saat uygulamasını önceden doldurulmuş açmak için; alarmı sen onaylarsın.</li><li><strong>İnternet:</strong> yalnızca asistan için (Bölüm 4).</li><li><strong>Parmak izi / yüz / ekran kilidi:</strong> Uygulama kilidini açarsan doğrulamayı telefonun kendi sistemi yapar. Adım parmak izi ya da yüz verini <strong>görmez ve saklamaz</strong>; yalnızca "doğrulandı / doğrulanamadı" bilgisini alır. Adım kendi şifresini saklamaz.</li><li><strong>Takvime ekle:</strong> Görevi takvime eklerken telefonunun standart "etkinlik ekle" ekranı açılır; bilgi seçtiğin takvim uygulamasına verilir. Adım takvim izni istemez. O uygulamanın veriyi nasıl işlediği kendi politikasına bağlıdır.</li></ul>
+<h2 id="bolum-4">4. Yapay zeka asistanı (isteğe bağlı)</h2>
+<p>Asistan, yazdığın isteğe göre görev, alışkanlık, liste ya da uygulama limiti <strong>önerir</strong>; sen onaylamadan hiçbir şey eklenmez.</p>
+<p><strong>Ne gönderilir?</strong></p>
+<ul><li>Yazdığın mesaj (en çok 300 karakter) ve sohbetteki önceki mesajlar (toplam en çok son 6 mesaj). <strong>Mesajına ne yazarsan o gider</strong>; bırakmak istediğin şeylerle ilgili yazdıkların da buna dahildir. Hassas ayrıntıları yazmak zorunda değilsin.</li><li>Doğru öneri için bağlam: bugünün tarihi, saat dilimi, asistanı hangi sekmeden açtığın, liste adların, takip ettiğin uygulamaların <strong>adları</strong> (gizli bir ekran süresi kartın varsa eklenmez), rutin adların ve rutinlerindeki adım adları.</li><li>Sunucuyu yalnızca uygulamaya açık tutan, herkes için aynı olan bir uygulama anahtarı. Bu anahtar seni tanımaz.</li></ul>
+<p><strong>Ne gönderilmez?</strong> Bırak kartların, nedenlerin, istek ve kayma kayıtların, gizli kartların, görev içeriklerin ve alışkanlık kayıtların.</p>
+<p><strong>Acil durum:</strong> Mesajında acil durum ya da kriz belirtisi sayılan ifadeler varsa, mesaj telefonundan <strong>çıkmadan</strong> sabit bir yardım metni gösterilir. (Bu, güvence ya da tanı değildir; her kriz yakalanmayabilir. Acil durumda 112'yi ara.)</p>
+<p><strong>Sunucuda ne olur?</strong> Mesajın, <code>api.adimapp.me</code> adresindeki sunucuya (Cloudflare Workers) gider; orada yapay zeka modeline (Cloudflare Workers AI) iletilerek cevap üretilir. Sunucumuz mesaj içeriğini <strong>kaydetmez</strong>; Cloudflare günlük/izleme özelliği kapalıdır. Yalnızca kötüye kullanımı sınırlamak için sayaç tutulur. Kötüye kullanımı sınırlamak için IP adresinin günlük değişen kısa bir özeti sayaçta tutulur: günlük sayaç UTC gün sonuna, dakikalık sayaç 2 dakikaya kadar saklanır; IP adresi düz yazı olarak saklanmaz.</p>
+<p><strong>Cloudflare'in kendi işlemesi:</strong> Cloudflare'in yayımladığı Workers AI veri kullanım sayfasına göre müşteri içeriği model eğitmek için kullanılmaz ve standart çıkarım isteklerinde girdi/çıktı istek bittikten sonra tutulmaz; işletme amaçlı meta veriler (zaman, boyut, istek kaynağı gibi) tutulabilir ve bunlar içerik içermez. Cloudflare'in kendi politikası geçerlidir ve değişebilir.</p>
+<p><strong>Yurt dışı:</strong> Cloudflare küresel bir ağdır; mesajın Türkiye dışındaki sistemlerde işlenebilir. Bu nedenle asistan kullanılmadan önce ayrı bir onay ekranı gösterilir; onayı vermezsen asistan çalışmaz ve hiçbir şey gönderilmez. İstediğin zaman Ayarlar'dan kapatabilirsin.</p>
+<p><strong>Ad çözümleme (DNS):</strong> Bazı ağlarda sunucu adresine ulaşılabilmesi için <code>api.adimapp.me</code> adının çözümlenmesi şifreli DNS ile, sırayla Cloudflare (1.1.1.1), Google (8.8.8.8) ve Quad9 (9.9.9.9) çözümleyicilerine sorulabilir; bu çözümleyiciler sorgunu ve IP adresini görür ve kendi politikalarıyla işler. Adım bu sorguları kaydetmez. "Bağlantıyı dene" ve "Ayrıntılı tanı" düğmelerine basarsan aynı çözümleyicilere ve sunucumuza deneme istekleri gider; sonuç yalnızca ekranında gösterilir.</p>
+<h2 id="bolum-5">5. Üçüncü taraflar</h2>
+<ul><li><strong>Cloudflare, Inc.</strong> (sunucu ve yapay zeka altyapısı): yalnızca Bölüm 4'teki asistan akışı.</li><li><strong>Genel DNS çözümleyicileri</strong> (Cloudflare, Google, Quad9): yalnızca Bölüm 4'teki alan adı sorgusu.</li><li>Reklam ağı, analitik ya da çökme raporu hizmeti <strong>yoktur</strong>.</li><li>Uygulamadaki kaynak bağlantılarına ya da yardım hattı bağlantılarına dokunursan tarayıcın açılır; o sitenin politikası geçerlidir. Telefon numaralarına dokunursan telefonunun çeviricisi açılır, aramayı sen başlatırsın.</li></ul>
+<h2 id="bolum-6">6. KVKK kapsamında işleme amacı, hukuki sebep ve haklar</h2>
+<ul><li><strong>Amaç:</strong> Uygulamanın işlevlerini sunmak (telefonunda kalan veriler) ve isteğe bağlı asistan önerilerini üretmek (Bölüm 4).</li><li><strong>Hukuki sebep:</strong> Telefonunda kalan veriler geliştirici tarafından işlenmez. Asistan için gönderilen veriler, ayrı onay ekranında verdiğin <strong>açık rıza</strong>ya ve hizmetin sunulması için veri işlemenin zorunlu olmasına dayanır. Mesajına sağlık ya da bırakma bilgisi yazarsan özel nitelikli veri işlenmiş olabilir (KVKK m.6); yurt dışına aktarım ise m.9 kapsamındadır.</li><li><strong>Toplama yöntemi:</strong> Asistanı kullandığında uygulama üzerinden otomatik.</li><li><strong>Aktarım:</strong> Bölüm 5'teki taraflar; yurt dışına aktarım ihtimali Bölüm 4'te belirtilmiştir.</li><li><strong>Haklar (KVKK m.11):</strong> Verinin işlenip işlenmediğini öğrenme, bilgi isteme, işlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı kişileri bilme, eksik/yanlış işlenmişse düzeltilmesini isteme, silinmesini/yok edilmesini isteme, bunların aktarıldığı üçüncü kişilere bildirilmesini isteme, otomatik sistemle analiz sonucu aleyhine bir sonuca itiraz etme, kanuna aykırı işleme nedeniyle zararın giderilmesini isteme. Başvuru: destek@adimapp.me. Bu hakları uygulamada <strong>Ayarlar &gt; Gizlilik</strong> ekranında da tek tek okuyabilirsin.</li><li><strong>Not:</strong> Sunucumuz mesaj içeriğini saklamadığı için çoğu durumda silinecek ya da düzeltilecek sunucu kaydı bulunmaz; telefonundaki verileri sen yönetirsin.</li></ul>
+<h2 id="bolum-7">7. Verilerini silme ve talepler</h2>
+<p><strong>Telefonundaki veriler.</strong> Alışkanlık, görev, Bırak, ekran süresi ve ayar verilerinin tamamı yalnızca telefonundadır. Uygulamayı kaldırdığında Android, uygulamanın özel alanındaki bu verilerin hepsini siler. Ayrıca Ayarlar'daki <strong>"Verilerimi sil"</strong> kartı aynı işi uygulama içinde yapar: alışkanlık, görev, Bırak, hatırlatma ve ayar verilerinin tamamı kalıcı olarak silinir, işlem geri alınamaz; silmeden önce uygulama kilidi açıksa telefonunun kilidiyle doğrulama istenir. Asistan sohbeti uygulamada yalnızca bellekte tutulur; "Sohbeti temizle" ile silebilir, Ayarlar'dan asistanı kapatarak yeni mesaj gönderimini durdurabilirsin.</p>
+<p><strong>Sunucuda (Worker) ne saklanıyor?</strong></p>
+<ul><li><strong>Mesajların ve bağlam bilgilerin saklanmaz.</strong> Sunucumuzun kodu mesaj içeriğini hiçbir yere yazmaz ve Cloudflare günlük/izleme özelliği kapalıdır.</li><li>Saklanan tek şey kullanım sayaçlarıdır: toplam günlük istek ve işlem sayısı ile, IP adresinden üretilen ve her gün değişen kısa bir özete bağlı kişi başı sayaçlar. Kötüye kullanımı sınırlamak için IP adresinin günlük değişen kısa bir özeti sayaçta tutulur: günlük sayaç UTC gün sonuna, dakikalık sayaç 2 dakikaya kadar saklanır; IP adresi düz yazı olarak saklanmaz.</li><li>Hesap, kullanıcı adı, e-posta ya da kalıcı bir kullanıcı kimliği olmadığı için sunucuda sana ait, silinmesini isteyebileceğin kalıcı bir kullanıcı kaydı bulunmaz.</li></ul>
+<p><strong>Bizim denetimimiz dışındakiler.</strong> Mesajının işlendiği Cloudflare altyapısının kendi işletme kayıtları ve ad çözümleme için kullanılan genel DNS çözümleyicilerinin (Cloudflare, Google, Quad9) kayıtları ilgili şirketlerin kendi politikalarına bağlıdır; bunları biz silemeyiz ve bu politikaların ayrıntısı bu metinde doğrulanmış değildir.</p>
+<p><strong>Talep.</strong> Verinle ilgili bilgi, düzeltme ya da silme talebini destek@adimapp.me adresine yazabilirsin. Başvurun ücretsizdir ve talebin en geç otuz gün içinde sonuçlandırılır (KVKK m.13); kimliğini doğrulamak için başvurunda kullandığın e-posta dışında bir bilgi istemeyiz. Yukarıda anlatıldığı gibi sunucuda sana bağlanabilecek kalıcı bir kayıt tutmadığımız için çoğu durumda silinecek bir kayıt bulunmaz; talebini yine de değerlendirir ve yanıtlarız.</p>
+<h2 id="bolum-8">8. Güvenlik</h2>
+<p>Uygulama ile sunucu arasındaki iletişim yalnızca şifreli (https) yapılır. Telefondaki veriler uygulamanın özel alanında tutulur; istersen uygulama kilidiyle koruyabilirsin. Uygulama kilidi, telefonun kilidini bilen biri için tam koruma değildir. Hiçbir güvenlik önlemi mutlak koruma sağlamaz.</p>
+<h2 id="bolum-9">9. Çocuklar</h2>
+<p>Uygulama içinde yaş sorgusu yoktur. Hedef kitle ve yaş sınırı: <strong>18 yaş ve üzeri.</strong> Adım çocuklara yönelik değildir; Bırak bölümü tütün, alkol, kumar ve benzeri maddelerle ilgili olduğu için 18 yaşından küçüksen bu bölümü kullanmaman gerekir. Mağaza listesinde de hedef kitle 18+ olarak bildirilir.</p>
+<h2 id="bolum-10">10. Tıbbi sorumluluk reddi</h2>
+<p>Bırak bölümündeki "Biliyor muydun?" bilgileri resmî kılavuzlardan ve bilimsel yayınlardan özetlenmiştir; hata ya da eksik içerebilir ve zamanla değişebilir. Adım tedavi değildir, tıbbi, hukuki ya da psikolojik tavsiye vermez. Destek için uygulamadaki <strong>Yardım al</strong> bölümünde resmî kaynaklardan doğrulanmış yardım hatları bulunur. <strong>Acil durumda 112'yi ara.</strong></p>
+<h2 id="bolum-11">11. Değişiklikler</h2>
+<p>Bu politika güncellendiğinde yeni sürüm bu adreste yayımlanır ve "Son güncelleme" tarihi değişir. Yayın adresi: adimapp.me/gizlilik/ — uygulamada <strong>Ayarlar &gt; Gizlilik</strong> ekranındaki "Politikayı aç" düğmesi de bu adrese gider. (Bu metnin yayımlandığı sayfa hiçbir dış kaynağı yüklemez: betik, yazı tipi, resim ve izleyici yoktur.)</p>
+</main>
+</body>
+</html>
