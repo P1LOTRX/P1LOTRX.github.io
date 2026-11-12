@@ -193,6 +193,38 @@
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', label);
 })();
 
+/* Bekleme listesi */
+(function(){
+  var forms = document.querySelectorAll('form.wl');
+  if (!forms.length) return;
+  // Form, sunucudaki uç hazırsa görünür olur.
+  fetch('https://api.adimapp.me/v1/bekleme-listesi', {method:'GET'}).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
+    if (d && d.acik) forms.forEach(function(f){ f.hidden = false; });
+    else document.querySelectorAll('.wl-wrap').forEach(function(w){ w.hidden = true; });
+  }).catch(function(){ document.querySelectorAll('.wl-wrap').forEach(function(w){ w.hidden = true; }); });
+  forms.forEach(function(f){
+    var msg = f.querySelector('.msg'), btn = f.querySelector('button');
+    f.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var email = f.email.value.trim(), ok = f.riza.checked;
+      msg.className = 'msg';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){ msg.textContent = 'Geçerli bir e-posta adresi yaz.'; msg.classList.add('bad'); f.email.focus(); return; }
+      if (!ok){ msg.textContent = 'Devam etmek için onay kutusunu işaretle.'; msg.classList.add('bad'); return; }
+      btn.disabled = true; msg.textContent = 'Gönderiliyor…';
+      fetch('https://api.adimapp.me/v1/bekleme-listesi', {method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({email: email, riza: true, rizaSurumu: '2026-11-12', kaynak: location.pathname, website: f.website.value})})
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(d){ return {s:r.status, d:d}; }); })
+      .then(function(x){
+        if (x.s >= 200 && x.s < 300){ f.reset(); msg.textContent = x.d && x.d.zatenVar ? 'Bu adres zaten listede. Yayına çıkınca haber vereceğiz.' : 'Listeye eklendin. Yayına çıkınca tek bir e-postayla haber vereceğiz.'; msg.classList.add('good'); }
+        else if (x.s === 429){ msg.textContent = 'Çok fazla deneme oldu, biraz sonra tekrar dene.'; msg.classList.add('bad'); }
+        else { msg.textContent = 'Kaydedemedik. Biraz sonra tekrar dene ya da destek@adimapp.me adresine yaz.'; msg.classList.add('bad'); }
+      })
+      .catch(function(){ msg.textContent = 'Bağlantı kurulamadı. İnternetini kontrol edip tekrar dene.'; msg.classList.add('bad'); })
+      .then(function(){ btn.disabled = false; });
+    });
+  });
+})();
+
 (function(){
   if(!document.getElementById('tur')) return;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
