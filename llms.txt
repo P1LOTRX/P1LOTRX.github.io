@@ -10,6 +10,11 @@
 - [Kutu](https://adimapp.me/kutu/): Paylaş menüsünden link kaydetme, otomatik kategori, koleksiyonlar, yerler
 - [Paylaşım](https://adimapp.me/paylasim/): 69 düzen ve 430 story şablonu, kendi fotoğrafla
 - [Bahçe](https://adimapp.me/bahce/): Alışkanlık bahçesi, 52 rozet, yıl özeti, zaman kapsülü
+- [Rehber](https://adimapp.me/rehber/): Alışkanlık, düzen ve koşu üzerine kaynaklı yazılar
+  - [Yeni bir alışkanlık kaç günde oturur?](https://adimapp.me/rehber/aliskanlik-kac-gunde-oturur/)
+  - [Kaydettiğin linkleri kaybetmemenin en kolay yolu](https://adimapp.me/rehber/kaydedilen-linkleri-duzenlemek/)
+  - [Koşuya sıfırdan başlamak](https://adimapp.me/rehber/kosuya-sifirdan-baslamak/)
+- [Hakkında](https://adimapp.me/hakkinda/)
 - [Gizlilik politikası](https://adimapp.me/gizlilik/)
 - [Çerezler](https://adimapp.me/cerezler/)
 
