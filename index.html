@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adım: Alışkanlık, Görev, Takvim ve Koşu Takibi | Android Uygulaması</title>
+<meta name="description" content="Adım; alışkanlık takibi, görev listesi, kendi kurduğun esnek takvimler, GPS ile koşu takibi ve link kutusunu tek uygulamada toplar. Ücretsiz, reklamsız, hesap gerekmez.">
+<link rel="canonical" href="https://adimapp.me/">
+<link rel="alternate" hreflang="tr" href="https://adimapp.me/">
+<link rel="alternate" hreflang="x-default" href="https://adimapp.me/">
+<meta name="theme-color" content="#0B6A66">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Adım">
+<meta property="og:url" content="https://adimapp.me/">
+<meta property="og:title" content="Adım: Alışkanlık, Görev, Takvim ve Koşu Takibi | Android Uygulaması">
+<meta property="og:description" content="Adım; alışkanlık takibi, görev listesi, kendi kurduğun esnek takvimler, GPS ile koşu takibi ve link kutusunu tek uygulamada toplar. Ücretsiz, reklamsız, hesap gerekmez.">
+<meta property="og:image" content="https://adimapp.me/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://adimapp.me/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/pjs-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "@id": "https://adimapp.me/#app", "name": "Adım", "operatingSystem": "Android", "applicationCategory": "LifestyleApplication", "inLanguage": "tr", "url": "https://adimapp.me/", "image": "https://adimapp.me/icon-512.png", "description": "Alışkanlık takibi, görev listesi, kendi oluşturduğun esnek takvimler, GPS ile koşu ve yürüyüş takibi, rota planlama, link kutusu ve paylaşılabilir story şablonları.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "TRY"}, "publisher": {"@id": "https://adimapp.me/#org"}}, {"@type": "Organization", "@id": "https://adimapp.me/#org", "name": "Adım", "url": "https://adimapp.me/", "logo": "https://adimapp.me/icon-512.png", "email": "destek@adimapp.me"}, {"@type": "WebSite", "@id": "https://adimapp.me/#site", "url": "https://adimapp.me/", "name": "Adım", "inLanguage": "tr"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Adım ücretsiz mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Adım ücretsizdir ve reklam göstermez."}}, {"@type": "Question", "name": "Hesap açmam gerekiyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Adım hesap açmadan çalışır; görevlerin, takvimlerin ve koşuların telefonunda saklanır."}}, {"@type": "Question", "name": "iPhone'da var mı?", "acceptedAnswer": {"@type": "Answer", "text": "Şimdilik yalnızca Android için. iPhone sürümü ileride değerlendirilecek."}}, {"@type": "Question", "name": "Koşu için ayrı bir uygulama gerekir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Adım koşu, yürüyüş ve bisikleti GPS ile kaydeder; harita, km bölümleri, yükseklik profili ve rota planlama içerir."}}, {"@type": "Question", "name": "Nasıl testçi olurum?", "acceptedAnswer": {"@type": "Answer", "text": "destek@adimapp.me adresine Google Play'de kullandığın Gmail adresini yaz. Seni kapalı teste ekleyip bağlantıyı gönderelim."}}]}]}</script>
+</head><body>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Adım ana sayfa"><svg viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="112" fill="#0B6A66"/><path d="M149 345V285h59v-59h59v-59h96v178z" fill="#fff"/></svg> adım</a>
+    <nav aria-label="Bölümler">
+      <div class="links" id="menu"><a href="/planla/">Planla</a><a href="/takvimler/">Takvimler</a><a href="/hareket/">Hareket</a><a href="/kutu/">Kutu</a><a href="/paylasim/">Paylaşım</a><a href="/bahce/">Bahçe</a></div>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
+      <a class="btn btn-ink" href="/#testci">Testçi ol</a>
+    </nav>
+  </div>
+</header>
+<main id="icerik">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <h1 class="stairs" id="h1" aria-label="Her gün küçük bir adım.">
+        <span class="s s1" aria-hidden="true">Her gün<i class="dot"></i></span>
+        <span class="s s2" aria-hidden="true">küçük bir<i class="dot"></i></span>
+        <span class="s s3" aria-hidden="true">adım.<i class="dot"></i></span>
+      </h1>
+      <p class="lede">Alışkanlıkların, görevlerin, kendi kurduğun takvimler, koşuların ve kaydettiğin linkler. Hepsi tek bir Android uygulamasında, renkli ve sade.</p>
+      <div class="cta-row">
+        <a class="btn btn-ink" href="#testci">Testçi ol</a>
+        <a class="btn btn-ghost" href="#tur">Neler yapabildiğine bak</a>
+      </div>
+      <p class="note">Ücretsiz, reklamsız ve hesap açmadan kullanılır.</p>
+    </div>
+
+    <div class="phone" role="img" aria-label="Adım uygulamasının Bugün ekranı: günün ilerlemesi, görevler ve takvim işaretleri">
+      <div class="notch"></div>
+      <div class="screen">
+        <div class="ui">
+          <div>
+            <h4>İyi günler</h4>
+            <div class="sub">Perşembe, 12 Kasım</div>
+          </div>
+          <div class="card dark row">
+            <svg class="ring" viewBox="0 0 40 40"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18"/></svg>
+            <div><div style="font-weight:800;font-size:1.05em">Günün ilerlemesi</div><div class="mini">6 işten 4'ü bitti</div></div>
+          </div>
+          <div class="card" style="background:#D9F3EA">
+            <div style="font-weight:800;font-size:.9em;color:#0B5E47">Bugün kitap okudun mu?</div>
+            <div class="row" style="margin-top:.5em"><span class="chip" style="background:#0E8A68;color:#fff;padding:.45em 1em">Okudum</span><span class="chip" style="background:#fff;color:#0B5E47;padding:.45em 1em">Daha değil</span></div>
+          </div>
+          <div class="task done"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Kargoyu al</span></div>
+          <div class="task"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Akşam 5 km koş</span></div>
+          <div class="card row" style="background:#FFE6DA">
+            <div style="flex:1"><div class="mini" style="color:#B8430F;opacity:1">Bu hafta</div><div style="font-weight:800;font-size:1.3em;letter-spacing:-.02em">12,4 km</div></div>
+            <span class="chip" style="background:#FF7438;color:#2A1206;padding:.5em .9em">Koşuya başla</span>
+          </div>
+          <div class="card row" style="background:#ECE5FF"><span style="width:2.2em;height:2.2em;border-radius:.6em;background:linear-gradient(135deg,#C4B1FF,#6A3DF0);flex:none"></span><div><div style="font-weight:800;font-size:.85em">Kutu'da 3 yeni link</div><div class="mini" style="color:#4B23C2;opacity:1">2 tarif, 1 belgesel</div></div></div>
+          <div class="card row"><svg viewBox="0 0 60 80" style="width:2.2em;flex:none"><path d="M30 80V30" stroke="#3E8E3A" stroke-width="4"/><path d="M30 50c-12-2-18-10-18-18 10 0 18 6 18 18zM30 40c10-2 16-9 16-16-9 0-16 6-16 16z" fill="#5DB04F"/><circle cx="30" cy="22" r="10" fill="#E2367A"/><circle cx="30" cy="22" r="4" fill="#FFD23F"/></svg><div><div style="font-weight:800;font-size:.85em">Bahçende lale açtı</div><div class="mini" style="color:var(--muted);opacity:1">Kitap serin 30 gün</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tour" id="tur" data-scene="0" aria-label="Adım'ın bölümleri">
+  <div class="stick">
+    <div class="copy" aria-live="polite">
+      <article class="on" data-i="0">
+        <span class="kw"><a href="/planla/" style="text-decoration:none">Görev listesi ve alışkanlık takibi</a></span>
+        <h2>Günün tek bakışta.</h2>
+        <p>Görevler, alışkanlıklar ve hatırlatmalar aynı ekranda. Artı düğmesine basılı tut, "yarın dokuzda annemi ara, süt al" de; Adım ikisini ayrı ayrı ekler.</p>
+      </article>
+      <article data-i="1">
+        <span class="kw">Esnek takvimler</span>
+        <h2>Her gün değil, yaptıkça.</h2>
+        <p>İstediğin şey için kendi takvimini kur ya da 42 hazır şablondan başla. Yaptığın güne dokun, dönem koy, geri sayımı ana ekranda gör.</p>
+      </article>
+      <article data-i="2">
+        <span class="kw">GPS ile koşu ve yürüyüş takibi</span>
+        <h2>Koş, yürü, rotanı çiz.</h2>
+        <p>Harita, km bölümleri, yokuş profili ve rekorlar. Yolları takip eden rota planla, aynı parkurda geçen haftaki kendinle yarış.</p>
+      </article>
+      <article data-i="3">
+        <span class="kw">Link kaydetme ve okuma listesi</span>
+        <h2>Linklerin kaybolmasın.</h2>
+        <p>Instagram'da, YouTube'da ya da tarayıcıda Paylaş'a dokun, Kutu'ya kaydet. Başlık ve kategori kendiliğinden gelir.</p>
+      </article>
+      <article data-i="4">
+        <span class="kw">Alışkanlık bahçesi</span>
+        <h2>Alışkanlıkların büyüsün.</h2>
+        <p>Her alışkanlığın bahçende bir bitkisi var. İşaretledikçe filizlenir, çiçek açar. Bir gün aksatırsan boynunu büker ama solup gitmez.</p>
+      </article>
+      <article data-i="5">
+        <span class="kw">Story şablonları</span>
+        <h2>Story'n hazır.</h2>
+        <p>Koşun, serin, takvimin, bahçen. 430 hazır şablon; kendi fotoğrafını koy, filtre ve çıkartma ekle, paylaş.</p>
+      </article>
+    </div>
+
+    <div class="phone" aria-hidden="true">
+      <div class="notch"></div>
+      <div class="fan" id="fan1" style="background:#FF7438;color:#2A1206"><span style="font-size:12px">SALI AKŞAM</span><span style="font-size:52px;letter-spacing:-.05em">5,02</span><span style="font-size:12px">adım</span></div>
+      <div class="fan" id="fan2" style="background:#6A3DF0;color:#fff"><span style="font-size:12px">Kasım özeti</span><span style="font-size:30px;letter-spacing:-.03em;line-height:1">Bu ay 42 km koştum</span><span style="font-size:12px">adım</span></div>
+      <div class="fan" id="fan3" style="background:#D9F3EA;color:#0B5E47"><span style="font-size:12px">Kitap</span><span style="font-size:52px;letter-spacing:-.05em">30 gün</span><span style="font-size:12px">adım</span></div>
+      <div class="screen">
+        <!-- 0 Planla -->
+        <div class="scene on" data-s="0">
+          <div class="ui">
+            <div><h4>Bugün</h4><div class="sub">Perşembe, 12 Kasım</div></div>
+            <div class="card dark">
+              <div class="row" style="justify-content:space-between"><span style="font-weight:800">Günün ilerlemesi</span><span id="pct" style="font-weight:800">%0</span></div>
+              <div class="bar" style="margin-top:.6em"><i id="pbar" style="width:0;background:var(--blue);transition:width .3s"></i></div>
+            </div>
+            <div id="tasks" style="display:flex;flex-direction:column;gap:.45em"></div>
+            <div class="card" style="margin-top:.2em"><div style="font-weight:800;font-size:.9em;margin-bottom:.5em">Alışkanlıklar</div><div class="row" style="gap:.4em;flex-wrap:wrap"><span class="chip" style="background:#E3E9FF;color:#1E3CC0">Kitap, 12 gün</span><span class="chip" style="background:#D9F3EA;color:#0B5E47">Esneme, 47 gün</span><span class="chip" style="background:#FFE6DA;color:#B8430F">Erken kalk, 5 gün</span></div></div>
+          </div>
+        </div>
+        <!-- 1 Takvim -->
+        <div class="scene" data-s="1">
+          <div class="ui">
+            <div class="row" style="gap:.4em;flex-wrap:wrap"><span class="chip" style="background:#0E8A68;color:#fff">Spor salonu</span><span class="chip" style="background:#fff">Kitap</span><span class="chip" style="background:#fff">Dil pratiği</span><span class="chip" style="background:#fff">+ Yeni</span></div>
+            <div><h4>Kasım</h4><div class="sub">Yaptığın güne dokun</div></div>
+            <div class="cal" id="cal"></div>
+            <div class="card row" style="justify-content:space-between"><div><div class="mini" style="color:var(--muted);opacity:1">Bu ay</div><div style="font-weight:800;font-size:1.4em" id="calN">0 gün</div></div><div style="text-align:right"><div class="mini" style="color:var(--muted);opacity:1">Hedef</div><div style="font-weight:800;font-size:1.4em">12 gün</div></div></div>
+          </div>
+        </div>
+        <!-- 2 Hareket -->
+        <div class="scene" data-s="2">
+          <div class="map">
+            <svg viewBox="0 0 300 600" preserveAspectRatio="xMidYMid slice">
+              <g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round">
+                <path d="M-20 120 L330 160"/><path d="M60 -10 L90 620"/><path d="M-20 330 L330 300"/><path d="M210 -10 L240 620"/><path d="M-20 470 C100 450 200 500 330 480"/>
+              </g>
+              <path d="M150 380 Q170 330 160 300" stroke="#9FD4B5" stroke-width="60" opacity=".5"/>
+              <path id="route" d="M92 420 L98 318 L170 312 L178 238 L236 232 L232 150 L150 142 L90 136 L84 210 L94 300" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+              <path id="route2" d="M92 420 L98 318 L170 312 L178 238 L236 232 L232 150 L150 142 L90 136 L84 210 L94 300" fill="none" stroke="#FF7438" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle id="runner" r="9" fill="#17151F" stroke="#fff" stroke-width="4" cx="92" cy="420"/>
+              <g font-family="Jakarta" font-weight="800" font-size="13" fill="#17151F"><circle cx="175" cy="275" r="11" fill="#fff"/><text x="175" y="280" text-anchor="middle">1</text><circle cx="191" cy="146" r="11" fill="#fff" id="km2c" opacity="0"/><text x="191" y="151" text-anchor="middle" id="km2" opacity="0">2</text></g>
+            </svg>
+            <div class="runpanel">
+              <div class="row" style="justify-content:space-between;align-items:flex-end">
+                <div><div class="big" id="km">0,00</div><div class="mini">kilometre</div></div>
+                <div style="text-align:right"><div style="font-weight:800;font-size:1.3em" id="tm">0:00</div><div class="mini">süre</div></div>
+              </div>
+              <svg viewBox="0 0 200 40" style="width:100%;height:2.4em;margin-top:.6em" preserveAspectRatio="none"><path d="M0 40 L0 30 C30 28 40 12 70 14 C100 16 110 30 140 24 C165 19 180 8 200 10 L200 40 Z" fill="rgba(255,116,56,.35)"/><rect id="elev" x="0" y="0" width="0" height="40" fill="rgba(255,255,255,.12)"/></svg>
+              <div class="row" style="justify-content:space-between;margin-top:.3em"><span class="mini">Tempo 5:56 /km</span><span class="mini">Tırmanış +38 m</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- 3 Kutu -->
+        <div class="scene" data-s="3">
+          <div class="ui">
+            <div><h4>Kutu</h4><div class="sub">Kaydettiğin linkler</div></div>
+            <div class="row" style="gap:.4em;flex-wrap:wrap"><span class="chip" style="background:#6A3DF0;color:#fff">Hepsi</span><span class="chip" style="background:#fff">Tarif</span><span class="chip" style="background:#fff">İzlenecek</span><span class="chip" style="background:#fff">Gidilecek</span></div>
+            <div style="display:flex;flex-direction:column;gap:.5em" id="kutu">
+              <div class="kcard out"><span class="th" style="background:linear-gradient(135deg,#FFB86B,#FF7438)"></span><div><strong>Fırında sebzeli makarna</strong><em style="background:#FFE6DA;color:#B8430F">Tarif</em></div></div>
+              <div class="kcard out"><span class="th" style="background:linear-gradient(135deg,#8EA8FF,#2F55F4)"></span><div><strong>Okyanusun dibinde bir gün belgeseli</strong><em style="background:#E3E9FF;color:#1E3CC0">İzlenecek</em></div></div>
+              <div class="kcard out"><span class="th" style="background:linear-gradient(135deg,#7FD6B4,#0E8A68)"></span><div><strong>Moda'da sahile bakan kahveci</strong><em style="background:#D9F3EA;color:#0B5E47">Gidilecek yer</em></div></div>
+              <div class="kcard out"><span class="th" style="background:linear-gradient(135deg,#C4B1FF,#6A3DF0)"></span><div><strong>Daha iyi uyku için oda düzeni</strong><em style="background:#ECE5FF;color:#4B23C2">Okunacak</em></div></div>
+            </div>
+          </div>
+          <div class="toast out" id="toast"><span>Kutu'ya kaydedildi</span><span style="color:#C4B1FF">Düzenle</span></div>
+        </div>
+        <!-- 4 Bahçe -->
+        <div class="scene" data-s="4">
+          <div class="garden">
+            <div class="sun" style="top:30%;right:10%"></div>
+            <div class="cloud" style="top:34%;left:10%;width:3.4em"></div>
+            <div class="cloud" style="top:42%;left:46%;width:2.4em;opacity:.8"></div>
+            <div class="fence"></div>
+            <div class="path"></div>
+            <div class="pots" id="pots"></div>
+            <div class="pots front" id="pots2"></div>
+            <svg class="bfly" style="top:44%;left:20%" viewBox="0 0 22 16" aria-hidden="true"><path d="M11 8C7 0 0 1 2 7c1 3 5 3 9 1zM11 8c4-8 11-7 9-1-1 3-5 3-9 1z" fill="#FF7AB8"/><path d="M11 8c-3 4-7 7-8 4M11 8c3 4 7 7 8 4" fill="#E2367A"/></svg>
+            <svg class="bfly" style="top:52%;left:60%;animation-delay:-3s;animation-duration:7s" viewBox="0 0 22 16" aria-hidden="true"><path d="M11 8C7 0 0 1 2 7c1 3 5 3 9 1zM11 8c4-8 11-7 9-1-1 3-5 3-9 1z" fill="#FFD23F"/><path d="M11 8c-3 4-7 7-8 4M11 8c3 4 7 7 8 4" fill="#FF7438"/></svg>
+            <div class="gbox"><div style="font-weight:800">Bahçem</div><div style="color:var(--muted)" id="gtxt">7 bitki filizleniyor</div></div>
+          </div>
+        </div>
+        <!-- 5 Paylaş -->
+        <div class="scene" data-s="5">
+          <div style="position:absolute;inset:0;background:#FF7438;color:#2A1206;padding:16% 9% 9%;display:flex;flex-direction:column;justify-content:space-between;font-weight:800">
+            <div class="row" style="justify-content:space-between;font-size:.8em"><span>SALI AKŞAM KOŞUSU</span><span>10.11</span></div>
+            <div><div style="font-size:5.4em;letter-spacing:-.06em;line-height:.85">5,02</div><div style="font-size:1.6em;letter-spacing:-.02em">kilometre</div></div>
+            <div style="border-top:3px solid #2A1206;padding-top:.7em;display:grid;grid-template-columns:1fr 1fr"><div><div style="font-size:1.5em">29:48</div><div style="font-size:.7em">SÜRE</div></div><div><div style="font-size:1.5em">5:56</div><div style="font-size:.7em">TEMPO /KM</div></div></div>
+            <div style="font-size:.9em">adım</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ol class="steps" aria-label="Bölümler">
+      <li><a href="#tur" data-go="0" class="on">Planla</a></li>
+      <li><a href="#tur" data-go="1">Takvimler</a></li>
+      <li><a href="#tur" data-go="2">Hareket</a></li>
+      <li><a href="#tur" data-go="3">Kutu</a></li>
+      <li><a href="#tur" data-go="4">Bahçe</a></li>
+      <li><a href="#tur" data-go="5">Paylaş</a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="demos" id="icinden" aria-labelledby="demosh"><div class="wrap">
+  <div class="demos-head"><h2 id="demosh">Uygulamanın içinden.</h2><p>Adım'ın en sevdiğimiz yedi anı, telefonda nasıl görünüyorsa öyle. Her biri kendiliğinden oynar; istersen baştan izle.</p></div>
+<section class="demo" data-demo="share" style="--acc:var(--purple)" aria-labelledby="d-share">
+  <div class="demo-copy">
+    <h3 id="d-share">Başka uygulamadan Kutu'ya, iki dokunuşla</h3>
+    <p class="lead">Bir videoda, tarifte ya da haberde Paylaş'a dokun ve Adım'ı seç. Uygulama açılmaz bile; link kaydedilir, başlığı ve kategorisi kendiliğinden gelir.</p>
+    <ol class="dsteps"><li>Paylaş'a dokun</li><li>Adım: Kutu'ya kaydet'i seç</li><li>Kaydedildi, kaldığın yerden devam</li><li>Kutu'da başlığı ve kategorisiyle</li></ol>
+    <button class="replay" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Baştan oynat</button>
+  </div>
+  <div class="phone" role="img" aria-label="Başka uygulamadan Kutu'ya, iki dokunuşla: canlandırma">
+    <div class="notch"></div>
+    <div class="screen"><div class="fr on" data-f="app" style="background:#101014;color:#fff">
+  <div style="position:absolute;left:0;right:0;top:12%;height:34%;background:linear-gradient(135deg,#FFB86B,#FF7438 55%,#B8430F);display:grid;place-items:center"><svg width="44" height="44" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.35)"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg></div>
+  <div style="position:absolute;left:6%;right:6%;top:50%">
+    <div style="font-weight:800;font-size:1.05em;line-height:1.25">Fırında sebzeli makarna, 15 dakikada</div>
+    <div style="font-size:.72em;opacity:.65;margin-top:.3em">Mutfak Defteri · 128 bin görüntüleme</div>
+    <div class="row" style="gap:.5em;margin-top:1em;font-size:.72em;font-weight:700">
+      <span style="background:#26252c;border-radius:99px;padding:.5em .9em">Beğen</span>
+      <span class="d-share" style="background:#26252c;border-radius:99px;padding:.5em .9em">Paylaş</span>
+      <span style="background:#26252c;border-radius:99px;padding:.5em .9em">Kaydet</span>
+    </div>
+    <div style="margin-top:1.2em;display:flex;flex-direction:column;gap:.5em">
+      <div style="height:3.4em;border-radius:.6em;background:#1c1b22"></div><div style="height:3.4em;border-radius:.6em;background:#1c1b22"></div>
+    </div>
+  </div>
+  <div class="scrim"></div>
+  <div class="sheet" style="color:var(--ink)"><div class="grab"></div><div style="font-weight:800;margin-bottom:.8em">Paylaş</div>
+    <div class="appicons">
+      <span><i style="background:#E3E9FF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F55F4" stroke-width="2.2"><path d="M4 5h16v11H8l-4 4z"/></svg></i>Mesajlar</span>
+      <span><i style="background:#FFE6DA"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8430F" stroke-width="2.2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i>E-posta</span>
+      <span class="d-adim"><i style="overflow:hidden"><svg viewBox="0 0 512 512" width="100%" height="100%"><rect width="512" height="512" rx="112" fill="#0B6A66"/><path d="M149 345V285h59v-59h59v-59h96v178z" fill="#fff"/></svg></i>Kutu'ya kaydet</span>
+      <span><i style="background:#F1EFF4"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5F5A6B" stroke-width="2.2"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg></i>Kopyala</span>
+    </div>
+  </div>
+  <div class="tst"><span>Kutu'ya kaydedildi</span><span style="color:#C4B1FF">Düzenle</span></div>
+</div>
+<div class="fr" data-f="kutu"><div class="pad">
+  <div><h4 style="margin:0;font-size:1.6em;letter-spacing:-.03em">Kutu</h4><div class="lbl">Bugün</div></div>
+  <div class="kcard pop newcard" style="box-shadow:0 0 0 3px #6A3DF0 inset"><span class="th" style="background:linear-gradient(135deg,#FFB86B,#FF7438)"></span><div><strong>Fırında sebzeli makarna, 15 dakikada</strong><em class="pop newcat" style="background:#FFE6DA;color:#B8430F;display:inline-block">Tarif</em></div></div>
+  <div class="lbl" style="margin-top:.4em">Bu hafta</div>
+  <div class="kcard"><span class="th" style="background:linear-gradient(135deg,#8EA8FF,#2F55F4)"></span><div><strong>Okyanusun dibinde bir gün</strong><em style="background:#E3E9FF;color:#1E3CC0">İzlenecek</em></div></div>
+  <div class="kcard"><span class="th" style="background:linear-gradient(135deg,#7FD6B4,#0E8A68)"></span><div><strong>Moda'da sahile bakan kahveci</strong><em style="background:#D9F3EA;color:#0B5E47">Gidilecek yer</em></div></div>
+  <div class="kcard"><span class="th" style="background:linear-gradient(135deg,#C4B1FF,#6A3DF0)"></span><div><strong>Daha düzenli bir çalışma masası</strong><em style="background:#ECE5FF;color:#4B23C2">Okunacak</em></div></div>
+</div></div><div class="finger hide"></div></div>
+  </div>
+</section>
+<section class="demo" data-demo="voice" style="--acc:var(--blue)" aria-labelledby="d-voice">
+  <div class="demo-copy">
+    <h3 id="d-voice">Söyle, Adım yazsın</h3>
+    <p class="lead">Artı düğmesine basılı tut ve konuş. Tarih, saat ve bir cümledeki birden fazla iş kendiliğinden ayrılır; tek dokunuşla eklersin.</p>
+    <ol class="dsteps"><li>Artı düğmesine basılı tut</li><li>Aklındakini söyle</li><li>Adım ayırıp karta çevirir</li><li>Hepsini ekle</li></ol>
+    <button class="replay" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Baştan oynat</button>
+  </div>
+  <div class="phone" role="img" aria-label="Söyle, Adım yazsın: canlandırma">
+    <div class="notch"></div>
+    <div class="screen"><div class="fr on" data-f="today"><div class="pad">
+  <div><h4 style="margin:0;font-size:1.6em;letter-spacing:-.03em">Bugün</h4><div class="lbl">Perşembe, 12 Kasım</div></div>
+  <div class="lbl" style="margin-top:.3em">Yarın</div>
+  <div class="task pop t1"><span class="box"></span><span>Annemi ara</span><span style="margin-left:auto" class="lbl">09:00</span></div>
+  <div class="task pop t2"><span class="box"></span><span>Süt al</span></div>
+  <div class="task"><span class="box"></span><span>Kargoyu al</span></div>
+  <div class="task"><span class="box"></span><span>Ders tekrarı, 2 saat</span></div>
+</div>
+<div class="plus"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+<div class="scrim"></div>
+<div class="sheet"><div class="grab"></div>
+  <div style="font-weight:800;margin-bottom:.4em">Dinliyorum</div>
+  <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="typed"></div>
+  <div class="card pop c1" style="background:#E3E9FF;margin-top:.5em;display:flex;align-items:center;gap:.6em"><span style="width:1.8em;height:1.8em;border-radius:.5em;background:#2F55F4;display:grid;place-items:center;color:#fff;font-size:.8em"><svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M5 12l5 5 9-10" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div style="font-weight:800;font-size:.9em">Annemi ara</div><div class="lbl" style="color:#1E3CC0">Görev · yarın 09:00</div></div></div>
+  <div class="card pop c2" style="background:#E3E9FF;margin-top:.4em;display:flex;align-items:center;gap:.6em"><span style="width:1.8em;height:1.8em;border-radius:.5em;background:#2F55F4;display:grid;place-items:center;color:#fff;font-size:.8em"><svg viewBox="0 0 24 24" width="1em" height="1em"><path d="M5 12l5 5 9-10" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div style="font-weight:800;font-size:.9em">Süt al</div><div class="lbl" style="color:#1E3CC0">Görev · alışveriş</div></div></div>
+  <div class="btnp d-addall" style="background:var(--ink);color:#fff;margin-top:.7em">Hepsini ekle</div>
+</div>
+</div><div class="finger hide"></div></div>
+  </div>
+</section>
+<section class="demo" data-demo="cal" style="--acc:var(--purple)" aria-labelledby="d-cal">
+  <div class="demo-copy">
+    <h3 id="d-cal">Takvimini kendin kur</h3>
+    <p class="lead">Hazır şablonlardan başlayabilir ya da istediğin şeyi takip eden kendi takvimini oluşturabilirsin. Adını koy, rengini seç, yaptığın güne dokun.</p>
+    <ol class="dsteps"><li>Yeni takvim</li><li>Şablon seç ya da Özel'e dokun</li><li>Adını koy, rengini seç</li><li>Yaptığın günleri işaretle</li></ol>
+    <button class="replay" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Baştan oynat</button>
+  </div>
+  <div class="phone" role="img" aria-label="Takvimini kendin kur: canlandırma">
+    <div class="notch"></div>
+    <div class="screen"><div class="fr on" data-f="cals"><div class="pad">
+  <div class="chiprow"><span class="chip" style="background:#0E8A68;color:#fff">Kitap</span><span class="chip" style="background:#fff">Spor salonu</span><span class="chip d-new" style="background:var(--ink);color:#fff">+ Yeni</span></div>
+  <div><h4 style="margin:0;font-size:1.6em;letter-spacing:-.03em">Takvimler</h4><div class="lbl">Yaptıkça işaretle</div></div>
+  <div class="card"><div style="font-weight:800">Kitap okudum</div><div class="lbl">Bu ay 9 gün · toplam 3.350 sayfa</div></div>
+  <div class="card"><div style="font-weight:800">Spor salonu</div><div class="lbl">Bu hafta 3 gün</div></div>
+</div>
+<div class="scrim"></div>
+<div class="sheet"><div class="grab"></div><div style="font-weight:800;margin-bottom:.6em">Yeni takvim</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:.45em;font-size:.8em;font-weight:700">
+    <span class="card" style="background:#F1EFF4">Dil pratiği</span><span class="card" style="background:#F1EFF4">Erken kalktım</span>
+    <span class="card" style="background:#F1EFF4">Bitki sulama</span><span class="card" style="background:#F1EFF4">Kahvesiz gün</span>
+    <span class="card" style="background:#F1EFF4">Yüzme</span><span class="card" style="background:#F1EFF4">Kan bağışı</span>
+    <span class="card d-ozel" style="background:var(--ink);color:#fff;grid-column:span 2;text-align:center">Özel takvim oluştur</span>
+  </div>
+</div>
+</div>
+<div class="fr" data-f="form"><div class="pad">
+  <h4 style="margin:0;font-size:1.4em;letter-spacing:-.03em">Özel takvim</h4>
+  <div class="lbl">Adı</div>
+  <div class="card"><div class="typed"></div></div>
+  <div class="lbl">Renk</div>
+  <div class="row" style="gap:.6em"><span class="swatch" style="background:#2F55F4"></span><span class="swatch" style="background:#0E8A68"></span><span class="swatch" style="background:#FF7438"></span><span class="swatch d-purple" style="background:#6A3DF0"></span><span class="swatch" style="background:#E2367A"></span></div>
+  <div class="lbl">Nasıl işaretleyeceksin?</div>
+  <div class="row" style="gap:.4em"><span class="chip" style="background:var(--ink);color:#fff">Yaptım / yapmadım</span><span class="chip" style="background:#fff">Dakika say</span></div>
+  <div class="btnp d-create" style="background:var(--ink);color:#fff;margin-top:auto">Oluştur</div>
+</div></div>
+<div class="fr" data-f="month"><div class="pad">
+  <div class="chiprow"><span class="chip" style="background:#6A3DF0;color:#fff">Gitar çalışması</span><span class="chip" style="background:#fff">Kitap</span><span class="chip" style="background:#fff">Spor salonu</span></div>
+  <div><h4 style="margin:0;font-size:1.6em;letter-spacing:-.03em">Kasım</h4><div class="lbl">Yaptığın güne dokun</div></div>
+  <div class="cal2"><b>Pt</b><b>Sa</b><b>Ça</b><b>Pe</b><b>Cu</b><b>Ct</b><b>Pz</b><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span data-d="1">1</span><span data-d="2">2</span><span data-d="3">3</span><span data-d="4">4</span><span data-d="5">5</span><span data-d="6">6</span><span data-d="7">7</span><span data-d="8">8</span><span data-d="9">9</span><span data-d="10">10</span><span data-d="11">11</span><span data-d="12">12</span><span data-d="13">13</span><span data-d="14">14</span><span data-d="15">15</span><span data-d="16">16</span><span data-d="17">17</span><span data-d="18">18</span><span data-d="19">19</span><span data-d="20">20</span><span data-d="21">21</span><span data-d="22">22</span><span data-d="23">23</span><span data-d="24">24</span><span data-d="25">25</span><span data-d="26">26</span><span data-d="27">27</span><span data-d="28">28</span><span data-d="29">29</span><span data-d="30">30</span></div>
+  <div class="card row" style="justify-content:space-between"><div><div class="lbl">Bu ay</div><div class="d-cnt" style="font-weight:800;font-size:1.3em">0 gün</div></div><div class="pop d-goal" style="text-align:right"><div class="lbl">Hedef</div><div style="font-weight:800;font-size:1.3em">12 gün</div></div></div>
+</div></div><div class="finger hide"></div></div>
+  </div>
+</section>
+<section class="demo" data-demo="close" style="--acc:var(--ink)" aria-labelledby="d-close">
+  <div class="demo-copy">
+    <h3 id="d-close">Günü kapat, yarına hazır uyan</h3>
+    <p class="lead">Akşam Adım seni nazikçe çağırır. Yapılmayanları yarına taşır, yarının en önemli üç işini seçersin. Sabah seni onlar karşılar.</p>
+    <ol class="dsteps"><li>Akşam bildirimine dokun</li><li>Kalanları yarına taşı</li><li>Yarının önemli üç işini seç</li><li>İyi geceler</li></ol>
+    <button class="replay" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Baştan oynat</button>
+  </div>
+  <div class="phone" role="img" aria-label="Günü kapat, yarına hazır uyan: canlandırma">
+    <div class="notch"></div>
+    <div class="screen"><div class="fr on" data-f="home" style="background:linear-gradient(#3B3470,#1B1A3A)"></div>
+<div class="banner"><span style="width:2.2em;height:2.2em;border-radius:.6em;overflow:hidden;flex:none"><svg viewBox="0 0 512 512" width="100%" height="100%"><rect width="512" height="512" rx="112" fill="#0B6A66"/><path d="M149 345V285h59v-59h59v-59h96v178z" fill="#fff"/></svg></span><div><div style="font-weight:800">Günü kapatalım mı?</div><div class="lbl">2 iş kaldı, 1 dakikanı alır.</div></div></div>
+<div class="fr" data-f="left"><div class="pad">
+  <div class="lbl">Günü kapat · 2/4</div><h4 style="margin:0;font-size:1.4em;letter-spacing:-.03em">Kalanlar</h4>
+  <div class="card r1" style="transition:transform .4s,opacity .35s"><div style="font-weight:800">Kargoyu al</div><div class="row" style="gap:.4em;margin-top:.5em"><span class="chip d-y1" style="background:var(--ink);color:#fff">Yarına</span><span class="chip" style="background:#F1EFF4">Bitti say</span></div></div>
+  <div class="card r2" style="transition:transform .4s,opacity .35s"><div style="font-weight:800">Faturayı öde</div><div class="row" style="gap:.4em;margin-top:.5em"><span class="chip d-y2" style="background:var(--ink);color:#fff">Yarına</span><span class="chip" style="background:#F1EFF4">Bitti say</span></div></div>
+</div></div>
+<div class="fr" data-f="stars"><div class="pad">
+  <div class="lbl">Günü kapat · 3/4</div><h4 style="margin:0;font-size:1.4em;letter-spacing:-.03em">Yarın en önemli 3 iş?</h4>
+  <div class="task"><svg class="star st1" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.3 6.1 20.5l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor"/></svg><span>Kargoyu al</span></div>
+  <div class="task"><svg class="star " viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.3 6.1 20.5l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor"/></svg><span>Faturayı öde</span></div>
+  <div class="task"><svg class="star st2" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.3 6.1 20.5l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor"/></svg><span>Ders tekrarı, 2 saat</span></div>
+  <div class="task"><svg class="star " viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.3 6.1 20.5l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor"/></svg><span>Market alışverişi</span></div>
+  <div class="task"><svg class="star st3" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.3 6.1 20.5l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor"/></svg><span>Akşam 5 km koş</span></div>
+</div></div>
+<div class="fr" data-f="night"><div class="nightbg"></div><div class="moon"></div>
+  <div class="stars"><i style="top:14%;left:20%"></i><i style="top:30%;left:40%"></i><i style="top:18%;left:62%"></i><i style="top:40%;left:12%"></i><i style="top:36%;left:76%"></i></div>
+  <svg viewBox="0 0 60 80" style="position:absolute;left:36%;width:28%;bottom:34%"><path d="M30 60V36" stroke="#3E8E3A" stroke-width="4"/><path d="M30 46c-10 0-15-6-15-12 8 0 15 4 15 12z" fill="#5DB04F"/><path d="M30 36c-2-8 4-14 10-12-1 7-5 11-10 12z" fill="#5DB04F"/><rect x="12" y="58" width="36" height="20" rx="5" fill="#B79BFF"/><path d="M22 66q3 2 6 0M33 66q3 2 6 0" stroke="#17151F" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+  <div style="position:absolute;left:8%;right:8%;bottom:9%;color:#fff"><div style="font-weight:800;font-size:1.3em;letter-spacing:-.02em;line-height:1.15">Yarın 6 görev, 2 takvim seni bekliyor. İyi geceler.</div></div>
+</div><div class="finger hide"></div></div>
+  </div>
+</section>
+<section class="demo" data-demo="studio" style="--acc:var(--orange)" aria-labelledby="d-studio">
+  <div class="demo-copy">
+    <h3 id="d-studio">Koşun bir posterle bitsin</h3>
+    <p class="lead">Özet ekranından Story'de paylaş'a dokun. Şablonları kaydır, kendi fotoğrafını koy, bir filtre seç. 430 hazır şablon var.</p>
+    <ol class="dsteps"><li>Story'de paylaş</li><li>Şablonları kaydır</li><li>Fotoğraf ve filtre ekle</li><li>Paylaş ya da kaydet</li></ol>
+    <button class="replay" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Baştan oynat</button>
+  </div>
+  <div class="phone" role="img" aria-label="Koşun bir posterle bitsin: canlandırma">
+    <div class="notch"></div>
+    <div class="screen"><div class="fr on" data-f="sum"><div class="pad">
+  <h4 style="margin:0;font-size:1.4em;letter-spacing:-.03em">Salı akşam koşusu</h4><div class="lbl">10 Kasım, 19:42</div>
+  <div class="card" style="height:8em;position:relative;overflow:hidden;background:#EEF0EA"><svg viewBox="0 0 200 100" style="position:absolute;inset:0;width:100%;height:100%"><path d="M20 80 L40 40 L90 36 L100 18 L160 22 L176 70 L120 84 Z" fill="none" stroke="#FF7438" stroke-width="5" stroke-linejoin="round"/></svg></div>
+  <div class="row" style="gap:.5em"><div class="card" style="flex:1"><div class="lbl">Mesafe</div><div style="font-weight:800;font-size:1.3em">5,02 km</div></div><div class="card" style="flex:1"><div class="lbl">Süre</div><div style="font-weight:800;font-size:1.3em">29:48</div></div></div>
+  <div class="btnp d-story" style="background:var(--orange);color:var(--orange-ink);margin-top:auto">Story'de paylaş</div>
+</div></div>
+<div class="fr" data-f="st" style="background:#17151F">
+  <div class="tpl-area" style="position:absolute;left:12%;right:12%;top:9%;bottom:32%;border-radius:1em;overflow:hidden;background:#FF7438">
+    <div class="photo"></div>
+    <div class="tplp k1 on" style="color:#2A1206"><span style="font-size:.7em">SALI AKŞAM KOŞUSU</span><div><div style="font-size:3.6em;letter-spacing:-.06em;line-height:.85">5,02</div><div style="font-size:1.1em">kilometre</div></div><div style="font-size:.7em">29:48 · 5:56 /km · adım</div></div>
+    <div class="tplp k2" style="background:#FFFDF6;color:#17151F;font-family:ui-monospace,Menlo,monospace"><span style="font-size:.62em">ADIM KOŞU BİLETİ No 0042</span><div style="font-size:2.2em">5,02 KM</div><div style="border-top:2px dashed #17151F;padding-top:.5em;font-size:.62em">KALKIŞ 19:42 → VARIŞ 20:12</div></div>
+    <div class="tplp k3" style="background:#17151F;color:#FF7AE0;text-shadow:0 0 10px #FF7AE0"><span style="font-size:.7em">GECE KOŞUSU</span><div style="font-size:3.4em;letter-spacing:-.04em">5,02</div><div style="font-size:.7em;color:#fff;text-shadow:none">bahane yok · adım</div></div>
+  </div>
+  <div class="tbar">
+    <div class="chiprow"><span class="chip sel d-orig">Orijinal</span><span class="chip d-duo">İki renk</span><span class="chip">Film</span><span class="chip">Siyah beyaz</span></div>
+    <div class="row" style="gap:.5em"><span class="btnp d-photo" style="background:rgba(255,255,255,.12);flex:1;color:#fff">Fotoğraf</span><span class="btnp d-sharebtn" style="background:var(--orange);color:var(--orange-ink);flex:1.3">Paylaş</span></div>
+  </div>
+  <div class="tst"><span>Görsel hazır</span><span style="color:#FFB27F">Story'ye gönder</span></div>
+</div><div class="finger hide"></div></div>
+  </div>
+</section>
+<section class="demo" data-demo="run" style="--acc:var(--orange)" aria-labelledby="d-run">
+  <div class="demo-copy">
+    <h3 id="d-run">Başla, koş, sonucu gör</h3>
+    <p class="lead">Koşu sırasında harita, mesafe ve tempo canlı akar; kilit ekranında da devam eder. Bitirince km bölümleri, yokuşlar ve rekorların hazırdır.</p>
+    <ol class="dsteps"><li>Koşuya başla</li><li>Canlı harita ve tempo</li><li>Basılı tutarak bitir</li><li>Bölümler ve rekorlar</li></ol>
+    <button class="replay" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Baştan oynat</button>
+  </div>
+  <div class="phone" role="img" aria-label="Başla, koş, sonucu gör: canlandırma">
+    <div class="notch"></div>
+    <div class="screen"><div class="fr on" data-f="move"><div class="pad" style="background:#FFF4EE">
+  <h4 style="margin:0;font-size:1.6em;letter-spacing:-.03em">Hareket</h4><div class="lbl">Bu hafta 12,4 km</div>
+  <div class="card"><div class="splits in" style="height:4em"><i style="height:40%"></i><i style="height:0;"></i><i style="height:70%"></i><i style="height:25%"></i><i style="height:90%"></i></div><div class="row lbl" style="justify-content:space-between;margin-top:.3em"><span>Pt</span><span>Ça</span><span>Cu</span><span>Ct</span><span>Pz</span></div></div>
+  <div class="card"><div class="lbl">Son koşu</div><div style="font-weight:800">Moda sahil turu · 4,88 km</div></div>
+  <div class="btnp d-start" style="background:var(--orange);color:var(--orange-ink);margin-top:auto;padding:1em">Koşuya başla</div>
+</div></div>
+<div class="fr" data-f="live"><div class="map"><svg viewBox="0 0 300 600" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%">
+  <g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"><path d="M-20 120 L330 160"/><path d="M60 -10 L90 620"/><path d="M-20 330 L330 300"/><path d="M210 -10 L240 620"/></g>
+  <path class="lroute" d="M88 400 L96 318 L170 312 L178 238 L236 232 L232 150 L150 142" fill="none" stroke="#FF7438" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="ldot" r="9" fill="#17151F" stroke="#fff" stroke-width="4" cx="88" cy="400"/></svg>
+  <div class="runpanel"><div class="row" style="justify-content:space-between;align-items:flex-end"><div><div class="big lkm">0,00</div><div class="mini">kilometre</div></div><div style="text-align:right"><div style="font-weight:800;font-size:1.3em" class="ltm">0:00</div><div class="mini">süre</div></div></div>
+  <div class="row" style="justify-content:space-between;margin-top:.5em"><span class="mini">Tempo 5:52 /km</span><span class="mini">GPS güçlü</span></div>
+  <div class="btnp d-finish" style="background:#2B2836;color:#fff;margin-top:.7em;position:relative;overflow:hidden">Bitir (basılı tut)<span class="holdring"></span></div></div>
+</div></div>
+<div class="fr" data-f="sum"><div class="pad">
+  <h4 style="margin:0;font-size:1.4em;letter-spacing:-.03em">Perşembe akşam koşusu</h4>
+  <div class="card" style="height:7.5em;position:relative;overflow:hidden;background:#EEF0EA"><svg viewBox="0 0 200 100" style="position:absolute;inset:0;width:100%;height:100%"><defs><linearGradient id="pg" x1="0" x2="1"><stop offset="0" stop-color="#2F55F4"/><stop offset=".5" stop-color="#0E8A68"/><stop offset="1" stop-color="#FF7438"/></linearGradient></defs><path class="sroute" d="M30 86 L40 54 L90 50 L96 24 L150 22 L148 60" fill="none" stroke="url(#pg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="row" style="gap:.5em"><div class="card" style="flex:1"><div class="lbl">Mesafe</div><div style="font-weight:800;font-size:1.2em">2,40 km</div></div><div class="card" style="flex:1"><div class="lbl">Tırmanış</div><div style="font-weight:800;font-size:1.2em">+24 m</div></div></div>
+  <div class="card"><div class="lbl" style="margin-bottom:.4em">Km bölümleri</div><div class="splits"><i style="height:70%"></i><i style="height:85%"></i><i style="height:60%;background:#17151F"></i></div></div>
+  <div class="card pop d-pr" style="background:#FFE6DA"><div style="font-weight:800;color:#B8430F">En hızlı 1 km'n: 4:58</div><div class="lbl">Yeni rekor</div></div>
+</div></div><div class="finger hide"></div></div>
+  </div>
+</section>
+<section class="demo" data-demo="wrapped" style="--acc:var(--teal)" aria-labelledby="d-wrapped">
+  <div class="demo-copy">
+    <h3 id="d-wrapped">Yılın bir hikâye olsun</h3>
+    <p class="lead">Aralık'ta Adım yılını özetler: kaç gün işaretledin, kaç km koştun, en uzun serin, okuduğun kitaplar. Her kart tek dokunuşla story olur.</p>
+    <ol class="dsteps"><li>Yıl özeti hazır</li><li>Kartlar kendiliğinden ilerler</li><li>Beğendiğini paylaş</li></ol>
+    <button class="replay" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Baştan oynat</button>
+  </div>
+  <div class="phone" role="img" aria-label="Yılın bir hikâye olsun: canlandırma">
+    <div class="notch"></div>
+    <div class="screen"><div class="fr on" data-f="w">
+  <div class="wcard on" style="background:#6A3DF0;color:#fff"><div class="wbar"><i></i><i></i><i></i><i></i><i></i></div><div class="lbl" style="color:#fff;opacity:.8">Yıl özetin</div><div class="wn">306 gün</div><div class="wt">2026 senin yılındı.</div><div class="ws">Bu kadar gün bir şeyler yaptın.</div></div>
+  <div class="wcard" style="background:#FF7438;color:#2A1206"><div class="wbar"><i></i><i></i><i></i><i></i><i></i></div><div class="lbl" style="color:#2A1206">Toplam</div><div class="wn">611 km</div><div class="wt">İstanbul'dan Atina'ya kadar.</div><div class="ws">86 kayıtta.</div></div>
+  <div class="wcard" style="background:#0E8A68;color:#fff"><div class="wbar"><i></i><i></i><i></i><i></i><i></i></div><div class="lbl" style="color:#fff;opacity:.8">En uzun seri</div><div class="wn">47 gün</div><div class="wt">Esneme, arka arkaya.</div><div class="ws">Zinciri kırmadın.</div></div>
+  <div class="wcard" style="background:#2F55F4;color:#fff"><div class="wbar"><i></i><i></i><i></i><i></i><i></i></div><div class="lbl" style="color:#fff;opacity:.8">Okuma</div><div class="wn">11 kitap</div><div class="wt">3.350 sayfa.</div><div class="ws">Rafın büyüyor.</div></div>
+  <div class="wcard" style="background:#17151F;color:#fff"><div class="wbar"><i></i><i></i><i></i><i></i><i></i></div><div class="lbl" style="color:#fff;opacity:.8">Adım kişiliğin</div><div class="wn" style="font-size:3em">Sabah Kuşu</div><div class="wt">Güneş doğmadan ayakkabılar bağlı.</div><div class="ws">Eğlencesine bir etiket.</div><div class="btnp wshare" style="background:#fff;color:#17151F;margin-top:.6em">Story'de paylaş</div></div>
+  <div class="tst"><span>Görsel hazır</span><span style="color:#9FE3D9">Story'ye gönder</span></div>
+</div><div class="finger hide"></div></div>
+  </div>
+</section>
+</div></section>
+
+<section class="wall" aria-labelledby="wallh">
+  <div class="wrap intro">
+    <h2 id="wallh">Her koşunun bir posteri olsun.</h2>
+    <p>Bilet, fiş, dergi kapağı, polaroid, neon tabela, yıl ızgarası. 69 düzen ve 430 hazır şablon, istersen kendi fotoğrafınla. Her paylaşımın başkalarınınkinden farklı görünsün.</p>
+  </div>
+  <div class="lane" id="lane1"></div>
+  <div class="lane rev" id="lane2"></div>
+</section>
+
+<section class="sec" aria-labelledby="moreh">
+  <div class="wrap">
+    <h2 id="moreh">Küçük ama işini bilen şeyler.</h2>
+    <nav class="others" aria-label="Özellik sayfaları"><a href="/planla/" style="background:#2F55F4">Planla<small>Görevler, alışkanlıklar, hatırlatmalar</small></a><a href="/takvimler/" style="background:#0E8A68">Takvimler<small>Kendi takvimin, 42 şablon</small></a><a href="/hareket/" style="background:#FF7438;color:#2A1206">Hareket<small>Koşu, rota, yokuş, rekor</small></a><a href="/kutu/" style="background:#6A3DF0">Kutu<small>Linkler, tarifler, yerler</small></a><a href="/paylasim/" style="background:#E2367A">Paylaşım<small>430 story şablonu</small></a><a href="/bahce/" style="background:#0B6A66">Bahçe<small>Bitkiler, rozetler, yıl özeti</small></a></nav>
+    <div class="more">
+      <div><h3><svg class="mk" viewBox="0 0 16 16"><rect width="16" height="16" rx="5" fill="#17151F"/></svg><a href="/planla/">Günü kapat</a></h3><p>Akşam yapılmayanları yarına taşı, yarının en önemli üç işini seç. Sabah seni onlar karşılar.</p></div>
+      <div><h3><svg class="mk" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#2F55F4"/></svg><a href="/planla/">Sesle ekle</a></h3><p>Artı düğmesine basılı tut ve söyle. Tarih, saat ve birden fazla iş kendiliğinden ayrılır.</p></div>
+      <div><h3><svg class="mk" viewBox="0 0 16 16"><path d="M8 0l8 16H0z" fill="#FF7438"/></svg><a href="/planla/">Hedefler</a></h3><p>"Bu yıl 500 km", "20 kitap". Verine bağlanır, plana göre önde mi geride mi olduğunu söyler.</p></div>
+      <div><h3><svg class="mk" viewBox="0 0 16 16"><rect width="16" height="16" rx="5" fill="#6A3DF0"/></svg><a href="/bahce/">Zaman kapsülü</a></h3><p>Kendine mektup yaz, fotoğraf ekle, mühürle. Seçtiğin gün açılır; o zamanki seni bugünkü seninle karşılaştırır.</p></div>
+      <div><h3><svg class="mk" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#0E8A68"/></svg><a href="/bahce/">Rozetler</a></h3><p>İlk 5K, sabah 6 kulübü, 30 günlük seri, okuma kurdu. 52 rozet, hepsi kendi çizimimiz.</p></div>
+      <div><h3><svg class="mk" viewBox="0 0 16 16"><path d="M8 0l8 16H0z" fill="#0B6A66"/></svg><a href="/bahce/">Yıl özeti</a></h3><p>Aralık'ta yılın hikâyesi hazır: kaç km, en uzun seri, kaç kitap. Her kart tek dokunuşla story.</p></div>
+      <div><h3><svg class="mk" viewBox="0 0 16 16"><rect width="16" height="16" rx="5" fill="#E2367A"/></svg>Bırak</h3><p>Bırakmak istediğin bir alışkanlık için gün sayacı ve zor anlarda kısa bir mola ekranı.</p></div>
+      <div><h3><svg class="mk" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#17151F"/></svg><a href="/planla/">Odak sayacı</a></h3><p>Bir görev seç, 25 dakika ona ver. Biten odaklar görevin üstüne yazılır.</p></div>
+      <div><h3><svg class="mk" viewBox="0 0 16 16"><path d="M8 0l8 16H0z" fill="#2F55F4"/></svg><a href="/planla/">Önemli günler</a></h3><p>Doğum günleri, yıldönümleri, abonelik yenilemeleri. Kaç gün kaldığını Bugün ekranında görürsün.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="priv" id="gizlilik" aria-labelledby="privh">
+  <div class="wrap">
+    <div>
+      <h2 id="privh">Verin senin telefonunda.</h2>
+      <p class="fine">Görevlerin, takvimlerin, koşuların ve günlüğün cihazında saklanır. Asistan, yol takipli rota ve hava durumu gibi internet isteyen özellikler yalnızca o iş için gerekeni gönderir. Ayrıntılar <a href="/gizlilik/">gizlilik politikasında</a>.</p>
+    </div>
+    <ul>
+      <li><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/><path d="M3 3l18 18"/></svg></span><div><strong>Hesap gerekmez</strong><span>İndir ve kullanmaya başla. Ad, e-posta, telefon sormayız.</span></div></li>
+      <li><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 3l18 18"/></svg></span><div><strong>Reklam yok</strong><span>Uygulamada reklam ve izleme kodu yok. Bu sitede ziyaret istatistiği yalnızca izin verirsen tutulur.</span></div></li>
+      <li><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></span><div><strong>Kilitle ve yedekle</strong><span>Parmak iziyle uygulama kilidi, şifreli yedek ve istediğin an tüm verini silme.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="sss" aria-labelledby="faqh"><div class="wrap faq"><h2 id="faqh">Aklına takılanlar</h2><div><details><summary>Adım ücretsiz mi?</summary><p>Evet. Adım ücretsizdir ve reklam göstermez.</p></details><details><summary>Hesap açmam gerekiyor mu?</summary><p>Hayır. Adım hesap açmadan çalışır; görevlerin, takvimlerin ve koşuların telefonunda saklanır.</p></details><details><summary>iPhone&#x27;da var mı?</summary><p>Şimdilik yalnızca Android için. iPhone sürümü ileride değerlendirilecek.</p></details><details><summary>Koşu için ayrı bir uygulama gerekir mi?</summary><p>Hayır. Adım koşu, yürüyüş ve bisikleti GPS ile kaydeder; harita, km bölümleri, yükseklik profili ve rota planlama içerir.</p></details><details><summary>Nasıl testçi olurum?</summary><p>destek@adimapp.me adresine Google Play&#x27;de kullandığın Gmail adresini yaz. Seni kapalı teste ekleyip bağlantıyı gönderelim.</p></details></div></div></section>
+
+<section class="final" id="testci" aria-labelledby="finalh">
+  <div class="wrap">
+    <h2 class="stairs" id="finalh" aria-label="Sıradaki adım senin.">
+      <span class="s s1" aria-hidden="true">Sıradaki<i class="dot"></i></span>
+      <span class="s s2" aria-hidden="true">adım<i class="dot"></i></span>
+      <span class="s s3" aria-hidden="true">senin.<i class="dot"></i></span>
+    </h2>
+    <div class="cta-row">
+      <a class="btn btn-ink" id="mail" href="mailto:destek@adimapp.me?subject=Adım%20testçisi%20olmak%20istiyorum&amp;body=Merhaba%2C%20Adım'ı%20denemek%20istiyorum.%20Google%20Play'de%20kullandığım%20Gmail%20adresim%3A%20">Testçi olmak için yaz</a>
+    </div>
+    <p class="note">Adım şu an Google Play'de kapalı testte. Herkese açıldığında bu düğme indirme bağlantısına dönüşecek.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Adım</span>
+    <a href="/planla/">Planla</a><a href="/takvimler/">Takvimler</a><a href="/hareket/">Hareket</a><a href="/kutu/">Kutu</a><a href="/paylasim/">Paylaşım</a><a href="/bahce/">Bahçe</a>
+    <a href="/gizlilik/">Gizlilik politikası</a>
+    <a href="/cerezler/">Çerez politikası</a>
+    <button class="linkbtn" type="button" data-cerez>Çerez tercihleri</button>
+    <a href="mailto:destek@adimapp.me">destek@adimapp.me</a>
+    <a class="sp" href="#top">Başa dön</a>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

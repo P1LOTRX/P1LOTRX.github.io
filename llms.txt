@@ -1,0 +1,17 @@
+# Adım
+
+> Adım, alışkanlık takibi, görev listesi, kendi oluşturulan esnek takvimler, GPS ile koşu ve yürüyüş takibi, link kutusu ve paylaşılabilir story şablonlarını tek bir ücretsiz, reklamsız Android uygulamasında toplar. Hesap gerektirmez; veriler kullanıcının telefonunda saklanır.
+
+## Sayfalar
+- [Ana sayfa](https://adimapp.me/): Uygulamanın genel tanıtımı ve canlandırmalar
+- [Planla](https://adimapp.me/planla/): Görevler, alışkanlıklar, hatırlatmalar, sesle ekleme, günü kapat, odak sayacı, hedefler
+- [Takvimler](https://adimapp.me/takvimler/): Kendi kurulan takvimler, 42 hazır şablon, dönemler, gün doğumuna göre hatırlatma
+- [Hareket](https://adimapp.me/hareket/): GPS ile koşu, yürüyüş, bisiklet; rota planlama, yükseklik profili, bölümler, rekorlar
+- [Kutu](https://adimapp.me/kutu/): Paylaş menüsünden link kaydetme, otomatik kategori, koleksiyonlar, yerler
+- [Paylaşım](https://adimapp.me/paylasim/): 69 düzen ve 430 story şablonu, kendi fotoğrafla
+- [Bahçe](https://adimapp.me/bahce/): Alışkanlık bahçesi, 52 rozet, yıl özeti, zaman kapsülü
+- [Gizlilik politikası](https://adimapp.me/gizlilik/)
+- [Çerez politikası](https://adimapp.me/cerezler/)
+
+## İletişim
+- destek@adimapp.me
