@@ -11,7 +11,7 @@
 - [Paylaşım](https://adimapp.me/paylasim/): 69 düzen ve 430 story şablonu, kendi fotoğrafla
 - [Bahçe](https://adimapp.me/bahce/): Alışkanlık bahçesi, 52 rozet, yıl özeti, zaman kapsülü
 - [Gizlilik politikası](https://adimapp.me/gizlilik/)
-- [Çerez politikası](https://adimapp.me/cerezler/)
+- [Çerezler](https://adimapp.me/cerezler/)
 
 ## İletişim
 - destek@adimapp.me
