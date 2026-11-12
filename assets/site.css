@@ -540,3 +540,48 @@ html{color-scheme:light}
 :root[data-theme="dark"] .wl .msg.good{color:#4FC7BD}
 :root[data-theme="dark"] .wl .msg.bad{color:#FF8A80}
 .wl[hidden],.wl-wrap[hidden]{display:none!important}
+/* Yenilikler */
+.grow{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:8px 0 72px}
+.gr{background:var(--soft);border-radius:var(--r-md);padding:20px 20px 16px}
+.gr .n{margin:0;font-weight:700;font-size:16px;color:var(--muted)}
+.gr .n span{display:block;font-size:clamp(40px,5vw,56px);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--ink)}
+.gr .bars{display:flex;align-items:flex-end;gap:5px;height:64px;margin:16px 0 8px}
+.gr .bars i{flex:1;background:var(--acc);border-radius:4px 4px 2px 2px;transform-origin:bottom;animation:barup .9s cubic-bezier(.2,.8,.2,1) both}
+.gr .bars i:nth-child(2){animation-delay:.06s}.gr .bars i:nth-child(3){animation-delay:.12s}.gr .bars i:nth-child(4){animation-delay:.18s}.gr .bars i:nth-child(5){animation-delay:.24s}.gr .bars i:nth-child(6){animation-delay:.3s}.gr .bars i:nth-child(7){animation-delay:.36s}.gr .bars i:nth-child(8){animation-delay:.42s}
+@keyframes barup{from{transform:scaleY(0)}}
+.gr .from{margin:0;font-size:14px;font-weight:700;color:var(--muted)}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:47px;top:12px;bottom:12px;width:3px;border-radius:2px;background:var(--line)}
+.ver{display:grid;grid-template-columns:96px minmax(0,1fr);gap:0 28px;padding:0 0 64px;position:relative}
+.ver.has-shot{grid-template-columns:96px minmax(0,1fr) 240px}
+.vno{text-align:center;position:relative}
+.vno .num{display:grid;place-items:center;width:96px;height:96px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;font-size:32px;letter-spacing:-.03em;position:relative;z-index:1}
+.vno time{display:block;font-size:14px;font-weight:700;color:var(--muted);margin-top:10px;line-height:1.3}
+.vbody h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-.035em;line-height:1.05;margin:10px 0 12px;max-width:none}
+.vbody .oz{font-size:19px;line-height:1.6;margin:0 0 8px;max-width:60ch}
+.vbody h3{font-size:16px;margin:22px 0 4px}
+.vbody ul{margin:0;padding-left:1.15em;max-width:62ch}
+.vbody li{font-size:17px;line-height:1.6;margin:4px 0;color:#34303D}
+.chip{display:inline-block;font-size:14px;font-weight:800;padding:6px 12px;border-radius:999px;background:var(--soft);color:var(--ink)}
+.chip.on{background:var(--green);color:#fff}
+.shot{margin:0}
+.shot img{display:block;width:240px;height:auto;border-radius:24px;border:6px solid var(--ink);box-shadow:0 24px 48px -24px rgba(23,21,31,.45)}
+@media (max-width:900px){.ver.has-shot{grid-template-columns:72px minmax(0,1fr)}.shot{grid-column:2;margin-top:24px}.shot img{width:200px}}
+@media (max-width:640px){.grow{gap:8px}.gr{padding:14px 12px 12px}.gr .n{font-size:13px}.gr .n span{font-size:34px}.gr .bars{height:44px;gap:3px}.gr .from{font-size:12px}.tl::before{left:27px}.ver,.ver.has-shot{grid-template-columns:56px minmax(0,1fr);gap:0 16px}.vno .num{width:56px;height:56px;font-size:20px}.vno time{font-size:12px}}
+@media (prefers-reduced-motion:reduce){.gr .bars i{animation:none}}
+@media (prefers-color-scheme: dark){
+:root:not([data-theme="light"]) .gr{background:#1E1C26}
+:root:not([data-theme="light"]) .chip{background:#2A2833;color:#F1EFF6}
+:root:not([data-theme="light"]) .vbody li{color:#D3CFDC}
+:root:not([data-theme="light"]) .tl::before{background:#2A2833}
+:root:not([data-theme="light"]) .gr .n span{color:#F1EFF6}
+:root:not([data-theme="light"]) .gr .n,:root:not([data-theme="light"]) .gr .from,:root:not([data-theme="light"]) .vno time{color:#A9A4B6}
+:root:not([data-theme="light"]) .shot img{border-color:#2A2833}
+}
+:root[data-theme="dark"] .gr{background:#1E1C26}
+:root[data-theme="dark"] .chip{background:#2A2833;color:#F1EFF6}
+:root[data-theme="dark"] .vbody li{color:#D3CFDC}
+:root[data-theme="dark"] .tl::before{background:#2A2833}
+:root[data-theme="dark"] .gr .n span{color:#F1EFF6}
+:root[data-theme="dark"] .gr .n,:root[data-theme="dark"] .gr .from,:root[data-theme="dark"] .vno time{color:#A9A4B6}
+:root[data-theme="dark"] .shot img{border-color:#2A2833}
