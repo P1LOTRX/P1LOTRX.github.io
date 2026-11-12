@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPS ile Koşu ve Yürüyüş Takibi, Rota Planlama | Adım</title>
+<meta name="description" content="Koşu, yürüyüş ve bisikleti GPS ile kaydet. Yolları takip eden rota planlama, yükseklik profili, km bölümleri, rekorlar ve geçen haftaki kendinle yarış.">
+<link rel="canonical" href="https://adimapp.me/hareket/">
+<link rel="alternate" hreflang="tr" href="https://adimapp.me/hareket/">
+<link rel="alternate" hreflang="x-default" href="https://adimapp.me/hareket/">
+<meta name="theme-color" content="#0B6A66">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Adım">
+<meta property="og:url" content="https://adimapp.me/hareket/">
+<meta property="og:title" content="GPS ile Koşu ve Yürüyüş Takibi, Rota Planlama | Adım">
+<meta property="og:description" content="Koşu, yürüyüş ve bisikleti GPS ile kaydet. Yolları takip eden rota planlama, yükseklik profili, km bölümleri, rekorlar ve geçen haftaki kendinle yarış.">
+<meta property="og:image" content="https://adimapp.me/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://adimapp.me/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/pjs-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://adimapp.me/hareket/#page", "url": "https://adimapp.me/hareket/", "name": "GPS ile Koşu ve Yürüyüş Takibi, Rota Planlama | Adım", "description": "Koşu, yürüyüş ve bisikleti GPS ile kaydet. Yolları takip eden rota planlama, yükseklik profili, km bölümleri, rekorlar ve geçen haftaki kendinle yarış.", "inLanguage": "tr", "about": {"@id": "https://adimapp.me/#app"}, "isPartOf": {"@id": "https://adimapp.me/#site"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Adım", "item": "https://adimapp.me/"}, {"@type": "ListItem", "position": 2, "name": "Hareket", "item": "https://adimapp.me/hareket/"}]}, {"@type": "SoftwareApplication", "@id": "https://adimapp.me/#app", "name": "Adım", "operatingSystem": "Android", "applicationCategory": "LifestyleApplication", "inLanguage": "tr", "url": "https://adimapp.me/", "image": "https://adimapp.me/icon-512.png", "description": "Alışkanlık takibi, görev listesi, kendi oluşturduğun esnek takvimler, GPS ile koşu ve yürüyüş takibi, rota planlama, link kutusu ve paylaşılabilir story şablonları.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "TRY"}, "publisher": {"@id": "https://adimapp.me/#org"}}, {"@type": "Organization", "@id": "https://adimapp.me/#org", "name": "Adım", "url": "https://adimapp.me/", "logo": "https://adimapp.me/icon-512.png", "email": "destek@adimapp.me"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Konumum sürekli takip ediliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Konum yalnızca sen bir koşu başlattığında, bildirimde görünür şekilde kaydedilir. Rotaların telefonunda kalır."}}, {"@type": "Question", "name": "Rota çizerken ne gönderiliyor?", "acceptedAnswer": {"@type": "Answer", "text": "Yolları takip eden rota için yalnızca haritada seçtiğin noktalar rota hizmetine gönderilir. Ayrıntılar gizlilik politikasında."}}, {"@type": "Question", "name": "Başka uygulamadan rota alabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. GPX dosyalarını içe aktarabilir, kendi rotalarını da GPX olarak dışa verebilirsin."}}]}]}</script>
+</head><body>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Adım ana sayfa"><svg viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="112" fill="#0B6A66"/><path d="M149 345V285h59v-59h59v-59h96v178z" fill="#fff"/></svg> adım</a>
+    <nav aria-label="Bölümler">
+      <div class="links" id="menu"><a href="/planla/">Planla</a><a href="/takvimler/">Takvimler</a><a href="/hareket/" aria-current="page">Hareket</a><a href="/kutu/">Kutu</a><a href="/paylasim/">Paylaşım</a><a href="/bahce/">Bahçe</a></div>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
+      <a class="btn btn-ink" href="/#testci">Testçi ol</a>
+    </nav>
+  </div>
+</header>
+<main id="icerik" style="--acc:var(--orange)">
+<section class="phero" aria-labelledby="h1"><div class="wrap">
+  <div>
+    <p class="crumb"><a href="/">Adım</a> / Hareket</p>
+    <h1 id="h1">Koş, yürü, rotanı çiz.<span class="tread" aria-hidden="true"></span></h1>
+    <p class="lede">Ayrı bir koşu uygulamasına gerek yok. Harita, tempo, yokuşlar, bölümler ve rekorlar Adım'ın içinde.</p>
+    <div class="cta-row"><a class="btn btn-ink" href="/#testci">Testçi ol</a><a class="btn btn-ghost" href="#nasil">Nasıl çalışır</a></div>
+  </div>
+  <div class="phero-art"><div class="blob"></div><div style="width:min(340px,80vw);aspect-ratio:9/14;border-radius:36px;background:#FF7438;color:#2A1206;padding:30px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 30px 60px -24px rgba(23,21,31,.45);transform:rotate(-3deg)">
+  <span style="font-weight:800;font-size:15px">adım</span>
+  <div><div style="font-weight:800;font-size:clamp(72px,10vw,108px);letter-spacing:-.05em;line-height:.9">5,02</div><div style="font-weight:800;font-size:24px;letter-spacing:-.02em;margin-top:8px">kilometre</div><div style="font-weight:700;font-size:15px;opacity:.85;margin-top:6px">29:48 · 5:56 /km · +38 m</div></div>
+</div></div>
+</div></section>
+
+<section class="demos" id="nasil" aria-label="Nasıl çalışır"><div class="wrap"><section class="demo" data-demo="run" style="--acc:var(--orange)" aria-labelledby="d-run">
+  <div class="demo-copy">
+    <h3 id="d-run">Başla, koş, sonucu gör</h3>
+    <p class="lead">Koşu sırasında harita, mesafe ve tempo canlı akar; kilit ekranında da devam eder. Bitirince km bölümleri, yokuşlar ve rekorların hazırdır.</p>
+    <ol class="dsteps"><li>Koşuya başla</li><li>Canlı harita ve tempo</li><li>Basılı tutarak bitir</li><li>Bölümler ve rekorlar</li></ol>
+    <button class="replay" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Baştan oynat</button>
+  </div>
+  <div class="phone" role="img" aria-label="Başla, koş, sonucu gör: canlandırma">
+    <div class="notch"></div>
+    <div class="screen"><div class="fr on" data-f="move"><div class="pad" style="background:#FFF4EE">
+  <h4 style="margin:0;font-size:1.6em;letter-spacing:-.03em">Hareket</h4><div class="lbl">Bu hafta 12,4 km</div>
+  <div class="card"><div class="splits in" style="height:4em"><i style="height:40%"></i><i style="height:0;"></i><i style="height:70%"></i><i style="height:25%"></i><i style="height:90%"></i></div><div class="row lbl" style="justify-content:space-between;margin-top:.3em"><span>Pt</span><span>Ça</span><span>Cu</span><span>Ct</span><span>Pz</span></div></div>
+  <div class="card"><div class="lbl">Son koşu</div><div style="font-weight:800">Moda sahil turu · 4,88 km</div></div>
+  <div class="btnp d-start" style="background:var(--orange);color:var(--orange-ink);margin-top:auto;padding:1em">Koşuya başla</div>
+</div></div>
+<div class="fr" data-f="live"><div class="map"><svg viewBox="0 0 300 600" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%">
+  <g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"><path d="M-20 120 L330 160"/><path d="M60 -10 L90 620"/><path d="M-20 330 L330 300"/><path d="M210 -10 L240 620"/></g>
+  <path class="lroute" d="M88 400 L96 318 L170 312 L178 238 L236 232 L232 150 L150 142" fill="none" stroke="#FF7438" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="ldot" r="9" fill="#17151F" stroke="#fff" stroke-width="4" cx="88" cy="400"/></svg>
+  <div class="runpanel"><div class="row" style="justify-content:space-between;align-items:flex-end"><div><div class="big lkm">0,00</div><div class="mini">kilometre</div></div><div style="text-align:right"><div style="font-weight:800;font-size:1.3em" class="ltm">0:00</div><div class="mini">süre</div></div></div>
+  <div class="row" style="justify-content:space-between;margin-top:.5em"><span class="mini">Tempo 5:52 /km</span><span class="mini">GPS güçlü</span></div>
+  <div class="btnp d-finish" style="background:#2B2836;color:#fff;margin-top:.7em;position:relative;overflow:hidden">Bitir (basılı tut)<span class="holdring"></span></div></div>
+</div></div>
+<div class="fr" data-f="sum"><div class="pad">
+  <h4 style="margin:0;font-size:1.4em;letter-spacing:-.03em">Perşembe akşam koşusu</h4>
+  <div class="card" style="height:7.5em;position:relative;overflow:hidden;background:#EEF0EA"><svg viewBox="0 0 200 100" style="position:absolute;inset:0;width:100%;height:100%"><defs><linearGradient id="pg" x1="0" x2="1"><stop offset="0" stop-color="#2F55F4"/><stop offset=".5" stop-color="#0E8A68"/><stop offset="1" stop-color="#FF7438"/></linearGradient></defs><path class="sroute" d="M30 86 L40 54 L90 50 L96 24 L150 22 L148 60" fill="none" stroke="url(#pg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="row" style="gap:.5em"><div class="card" style="flex:1"><div class="lbl">Mesafe</div><div style="font-weight:800;font-size:1.2em">2,40 km</div></div><div class="card" style="flex:1"><div class="lbl">Tırmanış</div><div style="font-weight:800;font-size:1.2em">+24 m</div></div></div>
+  <div class="card"><div class="lbl" style="margin-bottom:.4em">Km bölümleri</div><div class="splits"><i style="height:70%"></i><i style="height:85%"></i><i style="height:60%;background:#17151F"></i></div></div>
+  <div class="card pop d-pr" style="background:#FFE6DA"><div style="font-weight:800;color:#B8430F">En hızlı 1 km'n: 4:58</div><div class="lbl">Yeni rekor</div></div>
+</div></div><div class="finger hide"></div></div>
+  </div>
+</section></div></section>
+<section class="sec" aria-labelledby="fh"><div class="wrap"><h2 id="fh" style="font-size:clamp(34px,4.6vw,64px);letter-spacing:-.04em;line-height:1;margin:0;max-width:16ch">Hareket'da neler var?</h2><div class="facts"><div><h3>Dört aktivite</h3><p>Koşu, yürüyüş, doğa yürüyüşü ve bisiklet. Her biri kendi ekranıyla.</p></div><div><h3>Rota planla</h3><p>Haritaya dokun; rota yolları takip eder. Mesafe, tırmanış ve tahmini süre anında.</p></div><div><h3>Yokuşlar</h3><p>Yükseklik profili, eğim ve kendiliğinden bulunan tırmanışlar.</p></div><div><h3>Hayaletle yarış</h3><p>Aynı parkurda geçen haftaki sen haritada koşar; öndeysen kulağına söylenir.</p></div><div><h3>Bölümler</h3><p>"Okul yokuşu" gibi kendi bölümlerini tanımla, her geçişte süren sıralansın.</p></div><div><h3>Rekorlar</h3><p>En hızlı 1 km, 5 km, 10 km ve daha fazlası. Kırdığında rozet.</p></div><div><h3>Kendi veri ekranın</h3><p>Koşarken hangi bilgileri göreceğini sen seçersin. Sesli geri bildirim de ayarlanır.</p></div><div><h3>Planlar ve aralıklar</h3><p>Sıfırdan 5K, 5K'dan 10K'ya. Koş-yürü aralıklarını sesli koç söyler.</p></div><div><h3>Benim Şehrim</h3><p>Bütün rotaların tek haritada. Kaç yeni sokak keşfettiğini görürsün.</p></div></div></div></section>
+<section class="sec" aria-labelledby="faqh"><div class="wrap faq"><h2 id="faqh">Aklına takılanlar</h2><div><details><summary>Konumum sürekli takip ediliyor mu?</summary><p>Hayır. Konum yalnızca sen bir koşu başlattığında, bildirimde görünür şekilde kaydedilir. Rotaların telefonunda kalır.</p></details><details><summary>Rota çizerken ne gönderiliyor?</summary><p>Yolları takip eden rota için yalnızca haritada seçtiğin noktalar rota hizmetine gönderilir. Ayrıntılar gizlilik politikasında.</p></details><details><summary>Başka uygulamadan rota alabilir miyim?</summary><p>Evet. GPX dosyalarını içe aktarabilir, kendi rotalarını da GPX olarak dışa verebilirsin.</p></details></div></div></section>
+<section class="sec" style="padding-top:0" aria-labelledby="oh"><div class="wrap"><h2 id="oh" style="font-size:clamp(28px,3.4vw,44px);letter-spacing:-.03em;margin:0">Adım'ın diğer bölümleri</h2><nav class="others" aria-label="Diğer bölümler"><a href="/planla/" style="background:#2F55F4">Planla<small>Görevler, alışkanlıklar, hatırlatmalar</small></a><a href="/takvimler/" style="background:#0E8A68">Takvimler<small>Kendi takvimin, 42 şablon</small></a><a href="/kutu/" style="background:#6A3DF0">Kutu<small>Linkler, tarifler, yerler</small></a><a href="/paylasim/" style="background:#E2367A">Paylaşım<small>430 story şablonu</small></a><a href="/bahce/" style="background:#0B6A66">Bahçe<small>Bitkiler, rozetler, yıl özeti</small></a></nav></div></section>
+<section class="final" aria-labelledby="finalh"><div class="wrap">
+  <h2 class="stairs" id="finalh" aria-label="Sıradaki adım senin."><span class="s s1" aria-hidden="true">Sıradaki<i class="dot"></i></span><span class="s s2" aria-hidden="true">adım<i class="dot"></i></span><span class="s s3" aria-hidden="true">senin.<i class="dot"></i></span></h2>
+  <div class="cta-row"><a class="btn btn-ink" href="mailto:destek@adimapp.me?subject=Adım%20testçisi%20olmak%20istiyorum&amp;body=Merhaba%2C%20Adım'ı%20denemek%20istiyorum.%20Google%20Play'de%20kullandığım%20Gmail%20adresim%3A%20">Testçi olmak için yaz</a></div>
+  <p class="note">Adım şu an Google Play'de kapalı testte. Herkese açıldığında bu düğme indirme bağlantısına dönüşecek. Yazacağın adres: destek@adimapp.me</p>
+</div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Adım</span>
+    <a href="/planla/">Planla</a><a href="/takvimler/">Takvimler</a><a href="/hareket/">Hareket</a><a href="/kutu/">Kutu</a><a href="/paylasim/">Paylaşım</a><a href="/bahce/">Bahçe</a>
+    <a href="/gizlilik/">Gizlilik politikası</a>
+    <a href="/cerezler/">Çerez politikası</a>
+    <button class="linkbtn" type="button" data-cerez>Çerez tercihleri</button>
+    <a href="mailto:destek@adimapp.me">destek@adimapp.me</a>
+    <a class="sp" href="#top">Başa dön</a>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
