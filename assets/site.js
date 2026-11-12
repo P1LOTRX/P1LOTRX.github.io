@@ -182,32 +182,15 @@
   });
 })();
 
-/* Çerez onayı ve Google Analytics (yalnızca izin verilirse yüklenir) */
+/* Tema: sistem / koyu / açık */
 (function(){
-  var GA = 'G-VM0VSPVY6L', KEY = 'adim-cerez-onayi';
-  function get(){ try { return localStorage.getItem(KEY); } catch(e){ return null; } }
-  function set(v){ try { localStorage.setItem(KEY, v); } catch(e){} }
-  function loadGA(){
-    if (window.__gaLoaded) return; window.__gaLoaded = true;
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function(){ dataLayer.push(arguments); };
-    gtag('consent', 'default', {analytics_storage:'granted', ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied'});
-    gtag('js', new Date());
-    gtag('config', GA, {allow_google_signals:false, allow_ad_personalization_signals:false});
-    var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA; document.head.appendChild(s);
-  }
-  function clearGA(){
-    document.cookie.split(';').forEach(function(c){ var n = c.split('=')[0].trim(); if (n.indexOf('_ga') === 0){ ['', '.adimapp.me', 'adimapp.me'].forEach(function(d){ document.cookie = n + '=; Max-Age=0; path=/' + (d ? '; domain=' + d : ''); }); } });
-  }
-  var bar = document.createElement('div');
-  bar.className = 'consent'; bar.hidden = true; bar.setAttribute('role', 'dialog'); bar.setAttribute('aria-label', 'Çerez tercihi');
-  bar.innerHTML = '<p>İzin verirsen, siteyi iyileştirmek için Google Analytics ile hangi sayfaların okunduğunu ölçüyoruz. Bunun için çerez kullanılır; reklam için kullanılmaz. Ayrıntılar <a href="/cerezler/">çerez politikasında</a>.</p><div class="row2"><button type="button" class="no">Reddet</button><button type="button" class="yes">Kabul et</button></div>';
-  document.body.appendChild(bar);
-  bar.querySelector('.yes').addEventListener('click', function(){ set('evet'); bar.hidden = true; loadGA(); });
-  bar.querySelector('.no').addEventListener('click', function(){ set('hayir'); bar.hidden = true; clearGA(); if (window.__gaLoaded) location.reload(); });
-  document.querySelectorAll('[data-cerez]').forEach(function(b){ b.addEventListener('click', function(){ bar.hidden = false; bar.querySelector('.yes').focus(); }); });
-  var v = get();
-  if (v === 'evet') loadGA(); else if (v !== 'hayir') bar.hidden = false;
+  var KEY='adim-tema', root=document.documentElement;
+  var btn=document.querySelector('.theme-btn'); if(!btn) return;
+  function cur(){ var t=root.getAttribute('data-theme'); if(t) return t; return window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'; }
+  function label(){ var d=cur()==='dark'; btn.setAttribute('aria-label', d?'Açık temaya geç':'Koyu temaya geç'); btn.setAttribute('aria-pressed', d); }
+  label();
+  btn.addEventListener('click', function(){ var n=cur()==='dark'?'light':'dark'; root.setAttribute('data-theme', n); try{localStorage.setItem(KEY,n);}catch(e){} label(); });
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', label);
 })();
 
 (function(){
