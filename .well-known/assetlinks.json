@@ -1,0 +1,23 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.drnt.habits",
+      "sha256_cert_fingerprints": [
+        "07:7F:23:8B:82:B1:72:DB:B6:ED:1F:64:0F:0F:09:DC:A4:6A:82:AA:CB:82:59:29:C4:BC:36:F8:6E:2B:C8:ED",
+        "C2:F3:BB:6A:27:4D:6B:C4:1A:6B:0C:F6:08:C8:91:76:6C:68:4D:B9:4D:78:FC:FE:8F:0A:A6:23:C2:4E:91:09"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.drnt.habits.debug",
+      "sha256_cert_fingerprints": [
+        "72:1E:8E:E1:47:07:14:A4:29:54:C2:64:95:C3:63:59:0E:64:A5:7A:08:5C:CA:59:15:F6:F4:7C:46:43:F7:75"
+      ]
+    }
+  }
+]
