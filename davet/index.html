@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex">
+<title>Adım çevresine davet</title>
+<!--
+  adimapp.me/c/<KOD> adresinde gösterilir (uygulama yüklü değilse ya da bağlantı tarayıcıda açılırsa).
+  Sunucu ayarı: /c/* isteği bu dosyaya yönlenmeli (Cloudflare Pages için _redirects: "/c/*  /davet.html  200").
+  Harici kaynak yok; kod yalnızca adres çubuğundan okunur, hiçbir yere gönderilmez.
+-->
+<style>
+:root{--bg:#f5f3ee;--fg:#17151f;--muted:#5b6066;--card:#fff;--line:#e3e1dc;--accent:#3355f0;--onaccent:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#111214;--fg:#ececee;--muted:#a3a8ae;--card:#1a1c1f;--line:#2a2d31;--accent:#5b78ff;--onaccent:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+main{max-width:34rem;margin:0 auto;padding:2.5rem 1rem 3rem}
+.logo{font-weight:800;font-size:1.1rem;letter-spacing:.02em;color:var(--muted)}
+h1{font-size:1.7rem;line-height:1.25;margin:.6rem 0 .8rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:1.1rem 1.2rem;margin:1.2rem 0}
+.code{font:700 2rem/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.18em;margin:.4rem 0 .2rem;word-break:break-all}
+.btn{display:block;text-align:center;text-decoration:none;font-weight:700;padding:.9rem 1rem;border-radius:.9rem;background:var(--accent);color:var(--onaccent);margin:.6rem 0}
+.btn.alt{background:transparent;color:var(--fg);border:1px solid var(--line)}
+button.copy{font:inherit;font-size:.95rem;padding:.45rem .9rem;border-radius:.7rem;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+p.small{font-size:.92rem;color:var(--muted)}
+ol{padding-left:1.2rem}
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">Adım</div>
+  <h1>Seni bir Adım çevresine davet ettiler</h1>
+  <p>Çevreler; arkadaşların, ailen ya da kulübünle paylaştığın küçük ve kapalı gruplardır. Yalnızca davet koduyla girilir.</p>
+
+  <div class="card">
+    <div>Davet kodun</div>
+    <div class="code" id="kod">—</div>
+    <button class="copy" id="kopyala" type="button">Kodu kopyala</button>
+  </div>
+
+  <a class="btn" id="ac" href="https://play.google.com/apps/testing/com.drnt.habits">Adım'ı indir ya da aç</a>
+
+  <div class="card">
+    <strong>Uygulama açılmazsa:</strong>
+    <ol>
+      <li>Adım'ı aç.</li>
+      <li><b>Ben &gt; Çevreler &gt; Davet koduyla katıl</b>'a dokun.</li>
+      <li>Yukarıdaki kodu yaz.</li>
+    </ol>
+  </div>
+
+  <p class="small">Çevreler 16 yaş ve üstü içindir ve bir Adım hesabı gerektirir. Adım şu an kapalı test aşamasında; indirme bağlantısı yalnızca teste katılanlar için çalışır.</p>
+</main>
+<script>
+(function () {
+  var parts = location.pathname.split("/").filter(Boolean);
+  var raw = parts[0] === "c" ? (parts[1] || "") : (new URLSearchParams(location.search).get("kod") || "");
+  var kod = raw.toUpperCase().replace(/[^A-Z0-9]/g, "");
+  var ok = /^[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{8}$/.test(kod);
+  var el = document.getElementById("kod");
+  el.textContent = ok ? kod : "Kod bulunamadı";
+  var btn = document.getElementById("kopyala");
+  if (!ok) { btn.style.display = "none"; return; }
+  btn.addEventListener("click", function () {
+    var done = function () { btn.textContent = "Kopyalandı"; };
+    if (navigator.clipboard) navigator.clipboard.writeText(kod).then(done, function () {});
+  });
+})();
+</script>
+</body>
+</html>
